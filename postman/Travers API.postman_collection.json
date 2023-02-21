@@ -1,0 +1,2537 @@
+{
+	"info": {
+		"_postman_id": "2f841df3-8126-4573-812e-2f92c02bbba1",
+		"name": "Travers API Copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19031475"
+	},
+	"item": [
+		{
+			"name": "Healthcheck",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{api_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/healthcheck",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"healthcheck"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Healthcheck - Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/healthcheck",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"healthcheck"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.10.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.2.34"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 06 Feb 2023 20:58:44 GMT"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, DELETE, OPTIONS"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Origin, Authorization, Access-Control-Allow-Headers, Cache-Control, X-Requested-With"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "XSRF-TOKEN=eyJpdiI6Ik12b3lkTEVsZ0JVSFFHVW9YVVMwV0E9PSIsInZhbHVlIjoiSzltUk1weUVoVzAzekxkSU1zNkR5UlVKU2VJYVFhRkdCYWtVZ0VjdDVPa1wvVGNYV1prK3luejcwK0x0MGxFYUEiLCJtYWMiOiI1NDllZmRlMGM5NThlODkwYWVhYWEwOGNiNDJiZTk3ODc4MmIxYWRlZGIyMGRlYmI4YzQyNTA4YmExMTMwNzVjIn0%3D; expires=Mon, 06-Feb-2023 22:58:44 GMT; Max-Age=7200; path=/"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "laravel_session=cERqw9E1UwBjvRR038GptN9nvn0NlZaPNEPNFxKo; expires=Mon, 06-Feb-2023 22:58:44 GMT; Max-Age=7200; path=/; httponly"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"ping\": \"pong\",\n    \"timestamp\": \"1675717124\"\n}"
+				},
+				{
+					"name": "Healthcheck - Failure",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/healthcheck",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"healthcheck"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.10.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.2.34"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 13 Feb 2023 07:56:51 GMT"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, DELETE, OPTIONS"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Origin, Authorization, Access-Control-Allow-Headers, Cache-Control, X-Requested-With"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "XSRF-TOKEN=eyJpdiI6IlwvUDVvWTlPUGoxbXdcL2xyQnlpK3dadz09IiwidmFsdWUiOiJFNkh1YWNyQWkxdWk4a2hLc2o3dVgyQ3Q0eEg2SkpRK0IrTFVpYkJ1OWFjVFIxVmRDNFRFd0RZM3Q2Tktia3ZQIiwibWFjIjoiOTA3Yjk1MjA1N2NmODM2MmYxOTcwZmFmZDY4YWEwNjZhYTg0YjE4Y2ZjYjFlNzJkM2E1NWQ1ZDlhN2I3MDUxNiJ9; expires=Mon, 13-Feb-2023 09:56:51 GMT; Max-Age=7200; path=/"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "laravel_session=Q0TOxJxhR5tha1FdzhGkwk8mU7RHXRBrIhlDh6HI; expires=Mon, 13-Feb-2023 09:56:51 GMT; Max-Age=7200; path=/; httponly"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": false,\n    \"errors\": [],\n    \"message\": \"Invalid token\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Available Markets",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{api_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/markets",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"markets"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Available Markets - Success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/markets",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"markets"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.10.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.2.34"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 14 Feb 2023 14:14:26 GMT"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, DELETE, OPTIONS"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Origin, Authorization, Access-Control-Allow-Headers, Cache-Control, X-Requested-With"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "XSRF-TOKEN=eyJpdiI6IjF4WWhPNGFvRCtHbG1lRFUzbmtMM3c9PSIsInZhbHVlIjoiVU9QSzlLbUpSTmtHXC9IV0M2K05ENmJpdE1tVmtoN1I0dkREbGRURGlqek1hUHhBTDJJNWJaMnd4Wmd4MkZJTWIiLCJtYWMiOiI3ZTk4ODAyMGQ3ODhhYzhlYzY4NTM0ZGYyN2I0YTBhNTNjZDliYzYzZjhhZDM3ZDg0YjAyY2NmMjVjNWM0N2RjIn0%3D; expires=Tue, 14-Feb-2023 16:14:26 GMT; Max-Age=7200; path=/"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "laravel_session=WXwi1DKB0v5PfumlaIgZS4ZOZlqB7EP1Qunu3tTa; expires=Tue, 14-Feb-2023 16:14:26 GMT; Max-Age=7200; path=/; httponly"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"name\": \"MEDIA MARKT KATOWICE I 3 STAWY\",\n            \"street\": \"ALPEJSKA 6\",\n            \"city\": \"Katowice\",\n            \"postcode\": \"40-506\",\n            \"sap_code\": \"O2243\"\n        },\n        {\n            \"name\": \"MEDIA MARKT  KIELCE\",\n            \"street\": \"RADOMSKA 8\",\n            \"city\": \"Kielce\",\n            \"postcode\": \"25-451\",\n            \"sap_code\": \"O1198\"\n        }\n    ]\n}"
+				},
+				{
+					"name": "Get Available Markets - Failure",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/markets",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"markets"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.10.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.2.34"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 13 Feb 2023 07:43:29 GMT"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, DELETE, OPTIONS"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Origin, Authorization, Access-Control-Allow-Headers, Cache-Control, X-Requested-With"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "XSRF-TOKEN=eyJpdiI6IkI3T1VmVTNVTFZzK0tUZm56RDR5Vnc9PSIsInZhbHVlIjoiUTdyU044XC9BUU5XRXJsRDFOWW9sam5UTWRBcW5HWUZcLzFcL3dcL0ppWlFiOU4wKzVXUmNMcXpWVDFmMm9tV2VCWTQiLCJtYWMiOiJhMzBiNmU3ZWQ3NmJkMzFmYjM3ZTNmODdlOTNkNDliY2FkMjRiZGQyM2I0ZTM2OWNmNDM4MTI3Yzc5MTNiNjM5In0%3D; expires=Mon, 13-Feb-2023 09:43:29 GMT; Max-Age=7200; path=/"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "laravel_session=Q0TOxJxhR5tha1FdzhGkwk8mU7RHXRBrIhlDh6HI; expires=Mon, 13-Feb-2023 09:43:29 GMT; Max-Age=7200; path=/; httponly"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": false,\n    \"errors\": [],\n    \"message\": \"Invalid token\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Available Delivery Types",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{api_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/delivery_types",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"delivery_types"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Available Delivery Types - Success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/delivery_types",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"delivery_types"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.10.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.2.34"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 14 Feb 2023 14:17:14 GMT"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, DELETE, OPTIONS"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Origin, Authorization, Access-Control-Allow-Headers, Cache-Control, X-Requested-With"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "XSRF-TOKEN=eyJpdiI6ImVsWW9Ba2c5S3ZDMUxCVERDU0d2WGc9PSIsInZhbHVlIjoiT0ZVSlEzRXB3eDdWaXJaWDZuVWlBXC8rVEp0VUNCdUViNW1UTnRsdUN4YWxKM3JvY0VnWUtWSGZUMitxT1V4WnoiLCJtYWMiOiI0YTA0MDZhM2NmYThlZTNlZjQ1MWVhOTdkN2QzNmYwMTNlNWI0MTVhZDVjMjUwN2NmMzgyZTU2YWVkODc4Yjg1In0%3D; expires=Tue, 14-Feb-2023 16:17:14 GMT; Max-Age=7200; path=/"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "laravel_session=WXwi1DKB0v5PfumlaIgZS4ZOZlqB7EP1Qunu3tTa; expires=Tue, 14-Feb-2023 16:17:14 GMT; Max-Age=7200; path=/; httponly"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"Dostawa Standard\"\n        },\n        {\n            \"id\": 2,\n            \"name\": \"Express\"\n        },\n        {\n            \"id\": 3,\n            \"name\": \"Super Express\"\n        },\n        {\n            \"id\": 4,\n            \"name\": \"Reklamacja\"\n        },\n        {\n            \"id\": 5,\n            \"name\": \"Serwis\"\n        },\n        {\n            \"id\": 6,\n            \"name\": \"Tylko recykling\"\n        },\n        {\n            \"id\": 7,\n            \"name\": \"Tylko montaż\"\n        },\n        {\n            \"id\": 8,\n            \"name\": \"Wymiana\"\n        },\n        {\n            \"id\": 9,\n            \"name\": \"Transfer\"\n        },\n        {\n            \"id\": 13,\n            \"name\": \"Dostawa + Montaż\"\n        }\n    ]\n}"
+				},
+				{
+					"name": "Get Available Delivery Types - Failure",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/delivery_types",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"delivery_types"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.10.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.2.34"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 13 Feb 2023 07:43:48 GMT"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, DELETE, OPTIONS"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Origin, Authorization, Access-Control-Allow-Headers, Cache-Control, X-Requested-With"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "XSRF-TOKEN=eyJpdiI6IitsbklBeTdFM2I0c040azNjYkdiVVE9PSIsInZhbHVlIjoiOWNqSmFxTUNXQTQ1R2l5ajdaYTZqNEdRXC9Zbm9qZG02OEQzSUdMejBNK0dOQ2I5ZEVwV3REK3hHdGJKMXFNdjMiLCJtYWMiOiI3NDFiYzVkZTBlZWE3NTkwYTVhMThmYzA2ZDJmZWY1MTE5NDk4MGEwNTRkY2ZiNDNjYzNjMWViNDY3NzRmYzAzIn0%3D; expires=Mon, 13-Feb-2023 09:43:48 GMT; Max-Age=7200; path=/"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "laravel_session=Q0TOxJxhR5tha1FdzhGkwk8mU7RHXRBrIhlDh6HI; expires=Mon, 13-Feb-2023 09:43:48 GMT; Max-Age=7200; path=/; httponly"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": false,\n    \"errors\": [],\n    \"message\": \"Invalid token\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Available Delivery Ranges",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{api_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/delivery_ranges",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"delivery_ranges"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Available Delivery Ranges - Success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/delivery_ranges",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"delivery_ranges"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.10.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.2.34"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 14 Feb 2023 14:15:55 GMT"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, DELETE, OPTIONS"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Origin, Authorization, Access-Control-Allow-Headers, Cache-Control, X-Requested-With"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "XSRF-TOKEN=eyJpdiI6Im5UWUhhQ2hLRzlPT3MyeTJoMERLbHc9PSIsInZhbHVlIjoiUTdUeFpQQytzVHRLNkVnbE9tSWtrdFwvVGlLb1BWSEJ2bEpvYWtnVnlBMkx0bE5McWhBYWlXY1pLbEF3c2o2NVoiLCJtYWMiOiI5MjNjYjI1NGVjODQzZTgxZTEyMzc1ZTFjNWIzMmMxMDc5OGQyNDg2Y2JhMTJlMjI0YjE1ZDg4M2U3NDkzNzZjIn0%3D; expires=Tue, 14-Feb-2023 16:15:55 GMT; Max-Age=7200; path=/"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "laravel_session=WXwi1DKB0v5PfumlaIgZS4ZOZlqB7EP1Qunu3tTa; expires=Tue, 14-Feb-2023 16:15:55 GMT; Max-Age=7200; path=/; httponly"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"range\": \"10-15\"\n        },\n        {\n            \"id\": 2,\n            \"range\": \"15-22\"\n        },\n        {\n            \"id\": 3,\n            \"range\": \"10-22\"\n        }\n    ]\n}"
+				},
+				{
+					"name": "Get Available Delivery Ranges - Failure",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/delivery_ranges",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"delivery_ranges"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.10.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.2.34"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 13 Feb 2023 07:44:17 GMT"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, DELETE, OPTIONS"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Origin, Authorization, Access-Control-Allow-Headers, Cache-Control, X-Requested-With"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "XSRF-TOKEN=eyJpdiI6IkltWlFjRU1PZ1BcL3NzOUc5V0duXC8xUT09IiwidmFsdWUiOiJodVdxVys2d1pwV2lcL2dHaXZwTHNvcm1QT2JvNXVvODFVcmhmbDlKZytlSEZSdkhZYTJYOHRzeTB1M1BUVUlhWSIsIm1hYyI6ImQ0ODJmZGE4ZjZjNzAyMjQxOTdhZmFhOTA1NDk1MmJmYzZjYmY4NzcwMDM0YzNjYjEyNDlkYzI4ZDc2MzEzNWUifQ%3D%3D; expires=Mon, 13-Feb-2023 09:44:17 GMT; Max-Age=7200; path=/"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "laravel_session=Q0TOxJxhR5tha1FdzhGkwk8mU7RHXRBrIhlDh6HI; expires=Mon, 13-Feb-2023 09:44:17 GMT; Max-Age=7200; path=/; httponly"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": false,\n    \"errors\": [],\n    \"message\": \"Invalid token\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Available Service Codes By Customer",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{api_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"customer_code\": \"O2243\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/service_codes",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"service_codes"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Available Service Codes By Customer - Success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"customer_code\": \"O2243\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/service_codes",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"service_codes"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.10.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.2.34"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 14 Feb 2023 14:18:13 GMT"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, DELETE, OPTIONS"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Origin, Authorization, Access-Control-Allow-Headers, Cache-Control, X-Requested-With"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "XSRF-TOKEN=eyJpdiI6IllyK25qY0pTSzgrTUpaUnU1Z1BhZXc9PSIsInZhbHVlIjoiMnE4WGFhZTIwRWx6ajlcL3FreVVTWDZmSGtLRkxMZ01kY2dFb2xNbWwrbFdcLzBVWm5lREdrUSsrUGNLVDZkS3diIiwibWFjIjoiMTMyMTFjZGFkYjU0ZjJiNGExZjQ1YmQ3NzE5M2FhMDZjMDI0MDFhODVjNDU1YmNjODhmZTdlMDZjOTA1MzhjZCJ9; expires=Tue, 14-Feb-2023 16:18:13 GMT; Max-Age=7200; path=/"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "laravel_session=WXwi1DKB0v5PfumlaIgZS4ZOZlqB7EP1Qunu3tTa; expires=Tue, 14-Feb-2023 16:18:13 GMT; Max-Age=7200; path=/; httponly"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"code\": \"1447629\",\n            \"description\": \"INSTALACJA AGD KUCHNIE PODSTAWOWY\",\n            \"mdi_group\": \"KTCH_BSC\"\n        },\n        {\n            \"code\": \"1447630\",\n            \"description\": \"INSTALACJA AGD KUCHNIE PREMIUM\",\n            \"mdi_group\": \"KTCH_PRM\"\n        },\n        {\n            \"code\": \"1447631\",\n            \"description\": \"INSTALACJA AGD KUCHNIE ROZSZERZONY\",\n            \"mdi_group\": \"KTCH_STD\"\n        },\n        {\n            \"code\": \"1447632\",\n            \"description\": \"INSTALACJA AGD ZABUDOWA PIEKARNIK PŁYTA PODSTAWOWY\",\n            \"mdi_group\": \"OVEN_PLATE_BSC\"\n        },\n        {\n            \"code\": \"1447633\",\n            \"description\": \"INSTALACJA AGD ZABUDOWA PIEKARNIK PŁYTA PREMIUM\",\n            \"mdi_group\": \"OVEN_PLATE_PRM\"\n        },\n        {\n            \"code\": \"1447634\",\n            \"description\": \"INSTALACJA AGD ZABUDOWA PIEKARNIK PŁYTA ROZSZERZONY\",\n            \"mdi_group\": \"OVEN_PLATE_STD\"\n        },\n        {\n            \"code\": \"1447635\",\n            \"description\": \"INSTALACJA LODÓWKA PODSTAWOWA\",\n            \"mdi_group\": null\n        },\n        {\n            \"code\": \"1447636\",\n            \"description\": \"INSTALACJA AGD LODÓWKA ZAMRAŻARKA WOLNOSTOJĄCE PREMIUM\",\n            \"mdi_group\": \"FRDG_FRZ_STND_PRM\"\n        },\n        {\n            \"code\": \"1447637\",\n            \"description\": \"INSTALACJA AGD LODÓWKA ZAMRAŻARKA WOLNOSTOJĄCE ROZSZERZONY\",\n            \"mdi_group\": \"FRDG_FRZ_STND_STD\"\n        },\n        {\n            \"code\": \"1447638\",\n            \"description\": \"INSTALACJA AGD LODÓWKA ZAMRAŻARKA ZABUDOWA DRZWI BEZ WYŚWIETLACZA\",\n            \"mdi_group\": \"FRDG_FRZ_BIN_WOSCR\"\n        },\n        {\n            \"code\": \"1447639\",\n            \"description\": \"INSTALACJA AGD LODÓWKA ZAMRAŻARKA WOLNOSTOJĄCE PODSTAWOWE ZABUDOWA\",\n            \"mdi_group\": null\n        },\n        {\n            \"code\": \"1447640\",\n            \"description\": \"INSTALACJA AGD LODÓWKA ZAMRAŻARKA ZABUDOWA PREMIUM\",\n            \"mdi_group\": \"FRDG_FRZ_BIN_PRM\"\n        },\n        {\n            \"code\": \"1447641\",\n            \"description\": \"INSTALACJA AGD LODÓWKA ZAMRAŻARKA ZABUDOWA ROZSZERZONY\",\n            \"mdi_group\": \"FRDG_FRZ_BIN_STD\"\n        },\n        {\n            \"code\": \"1447642\",\n            \"description\": \"INSTALACJA AGD LODÓWKA ZAMRAŻARKA ZABUDOWA DRZWI Z WYŚWIETLACZEM\",\n            \"mdi_group\": \"FRDG_FRZ_BIN_WSCR\"\n        },\n        {\n            \"code\": \"1447643\",\n            \"description\": \"INSTALACJA AGD OKAP KOMFORT\",\n            \"mdi_group\": \"HOOD_KOMF\"\n        },\n        {\n            \"code\": \"1447644\",\n            \"description\": \"INSTALACJA AGD OKAP PODSTAWOWY\",\n            \"mdi_group\": \"HOOD_BSC\"\n        },\n        {\n            \"code\": \"1447645\",\n            \"description\": \"INSTALACJA AGD PIEKARNIK PODSTAWOWY\",\n            \"mdi_group\": \"OVEN_BSC\"\n        },\n        {\n            \"code\": \"1447646\",\n            \"description\": \"INSTALACJA AGD PIEKARNIK PREMIUM\",\n            \"mdi_group\": \"OVEN_PRM\"\n        },\n        {\n            \"code\": \"1447647\",\n            \"description\": \"INSTALACJA AGD PIEKARNIK ROZSZERZONY\",\n            \"mdi_group\": \"OVEN_STD\"\n        },\n        {\n            \"code\": \"1447648\",\n            \"description\": \"INSTALACJA AGD PŁYTY PODSTAWOWY\",\n            \"mdi_group\": \"PLATE_BSC\"\n        },\n        {\n            \"code\": \"1447649\",\n            \"description\": \"INSTALACJA AGD PŁYTY PREMIUM\",\n            \"mdi_group\": \"PLATE_PRM\"\n        },\n        {\n            \"code\": \"1447650\",\n            \"description\": \"INSTALACJA AGD PŁYTY ROZSZERZONY\",\n            \"mdi_group\": \"PLATE_STD\"\n        },\n        {\n            \"code\": \"1447651\",\n            \"description\": \"INSTALACJA AGD PRALKI SUSZARKI PODSTAWOWY\",\n            \"mdi_group\": \"WSH_DRY_BSC\"\n        },\n        {\n            \"code\": \"1447652\",\n            \"description\": \"INSTALACJA AGD PRALKI SUSZARKI PREMIUM\",\n            \"mdi_group\": \"WSH_DRY_PRM\"\n        },\n        {\n            \"code\": \"1447653\",\n            \"description\": \"INSTALACJA AGD PRALKI SUSZARKI ROZSZERZONY\",\n            \"mdi_group\": \"WSH_DRY_STD\"\n        },\n        {\n            \"code\": \"1447654\",\n            \"description\": \"INSTALACJA AGD PRALKI SUSZARKI ZABUDOWA PODSTAWOWY\",\n            \"mdi_group\": \"WSH_DRY_BIN_BSC\"\n        },\n        {\n            \"code\": \"1447655\",\n            \"description\": \"INSTALACJA AGD PRALKI SUSZARKI ZABUDOWA PREMIUM\",\n            \"mdi_group\": \"WSH_DRY_BIN_PRM\"\n        },\n        {\n            \"code\": \"1447656\",\n            \"description\": \"INSTALACJA AGD PRALKI SUSZARKI ZABUDOWA ROZSZERZONY\",\n            \"mdi_group\": \"WSH_DRY_BIN_STD\"\n        },\n        {\n            \"code\": \"1447657\",\n            \"description\": \"INSTALACJA AGD ZMYWARKI PODSTAWOWY\",\n            \"mdi_group\": \"DWSH_BSC\"\n        },\n        {\n            \"code\": \"1447658\",\n            \"description\": \"INSTALACJA AGD ZMYWARKI PREMIUM\",\n            \"mdi_group\": \"DWSH_PRM\"\n        },\n        {\n            \"code\": \"1447659\",\n            \"description\": \"INSTALACJA AGD ZMYWARKI ROZSZERZONY\",\n            \"mdi_group\": \"DWSH_STD\"\n        },\n        {\n            \"code\": \"1447660\",\n            \"description\": \"INSTALACJA AGD ZMYWARKI ZABUDOWA\",\n            \"mdi_group\": \"DWSH_BIN\"\n        },\n        {\n            \"code\": \"1447662\",\n            \"description\": \"INSTALACJA EKSPRES PODSTAWOWY\",\n            \"mdi_group\": \"CFF_KOMF\"\n        },\n        {\n            \"code\": \"1447673\",\n            \"description\": \"INSTALACJA EKSPRES KOMFORT\",\n            \"mdi_group\": \"CFF_BSC\"\n        },\n        {\n            \"code\": \"1447663\",\n            \"description\": \"INSTALACJA MIKROFALA KOMFORT\",\n            \"mdi_group\": \"MCWAVE_KOMF\"\n        },\n        {\n            \"code\": \"1447664\",\n            \"description\": \"INSTALACJA MIKROFALA PODSTAWOWY\",\n            \"mdi_group\": \"MCWAVE_BSC\"\n        },\n        {\n            \"code\": \"1447665\",\n            \"description\": \"INSTALACJA PRALKI SUSZARKA WOLNOSTOJĄCA\",\n            \"mdi_group\": \"WSH_DRY_BUNDLE\"\n        },\n        {\n            \"code\": \"1447666\",\n            \"description\": \"INSTALACJA PRALKI SUSZARKA ZABUDOWA\",\n            \"mdi_group\": null\n        },\n        {\n            \"code\": \"1447667\",\n            \"description\": \"INSTALACJA KINO/HIFI PODSTAWOWY\",\n            \"mdi_group\": \"HIFI_BSC\"\n        },\n        {\n            \"code\": \"1447668\",\n            \"description\": \"INSTALACJA KINO/HIFI PREMIUM\",\n            \"mdi_group\": \"HIFI_PRM\"\n        },\n        {\n            \"code\": \"1447669\",\n            \"description\": \"INSTALACJA KINO/HIFI ROZSZERZONY\",\n            \"mdi_group\": \"HIFI_STD\"\n        },\n        {\n            \"code\": \"1447670\",\n            \"description\": \"INSTALACJA TV PREMIUM Z MONTAŻEM\",\n            \"mdi_group\": \"RTV_WALL_PRM\"\n        },\n        {\n            \"code\": \"1447671\",\n            \"description\": \"INSTALACJA TV PODSTAWOWY\",\n            \"mdi_group\": \"RTV_BSC\"\n        },\n        {\n            \"code\": \"1447672\",\n            \"description\": \"INSTALACJA TV ROZSZERZONY\",\n            \"mdi_group\": \"RTV_STD\"\n        }\n    ]\n}"
+				},
+				{
+					"name": "Get Available Service Codes By Customer Failure",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/service_codes",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"service_codes"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.10.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.2.34"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 04 Feb 2023 10:28:15 GMT"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, DELETE, OPTIONS"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Origin, Authorization, Access-Control-Allow-Headers, Cache-Control, X-Requested-With"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "XSRF-TOKEN=eyJpdiI6IkxRZkwxdVwvSXlWbXlZQzUralVUb01RPT0iLCJ2YWx1ZSI6ImZiTVZnSXlWalJWTGY4SXNHaU5PbDBGYzBydmZiUmZRdm5UXC85ZlJ0ek04T0lmMjVwMEpLaWJUYnNQdWNGN2hQIiwibWFjIjoiZDkzODc4NTYxOTc4NWQ0MjE3ZWVhMDE0YWI5NjM3MDdmMDBmMzJkZDMyOTU0MzA3NDAyMGFjNzU2NWMxYzI4YSJ9; expires=Sat, 04-Feb-2023 12:28:15 GMT; Max-Age=7200; path=/"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "laravel_session=ablKfGDxSed846qQOw6yLk4sdpHbl5y7aQvkTw18; expires=Sat, 04-Feb-2023 12:28:15 GMT; Max-Age=7200; path=/; httponly"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": false,\n    \"errors\": {\n        \"customer_code\": [\n            \"Pole ma nieprawidłową wartość\"\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Create Task",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{api_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"market_code\": \"O2243\",\n    \"delivery_number\": \"DN001\",\n    \"customer_name\": \"Joe Doe\",\n    \"customer_phone\": \"+48 111 222 333\",\n    \"delivery_address\": \"Delivery Street 1/2\",\n    \"delivery_postcode\": \"02-001\",\n    \"delivery_city\": \"Customer City\",\n    \"additional_info\": \"Please contact customer before delivery.\",\n    \"is_recyclable\": 0,\n    \"delivery_type\": 3,\n    \"delivery_range\": 1,\n    \"delivery_date\": \"2023-02-13\",\n    \"is_paid\": 1,\n    \"amount_to_pay\": 0,\n    \"product_name\": [\n        \"Product Name 1\",\n        \"Product Name 2\"\n    ],\n    \"quantity\": [\n        1,\n        2\n    ],\n    \"product_receive_name\": [\n        \"Product Receive Name 1\",\n        \"Product Receive Name 2\"\n    ],\n    \"quantity_receive\": [\n        1,\n        2\n    ],\n    \"service_name\": [\n        \"KTCH_BSC\"   \n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/task",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"task"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create Task - Dostawa Standard",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"delivery_number\": \"DN001\",\n    \"customer_name\": \"Joe Doe\",\n    \"customer_phone\": \"+48 111 222 333\",\n    \"delivery_address\": \"Delivery Street 1/2\",\n    \"delivery_postcode\": \"AB 001\",\n    \"delivery_city\": \"Customer City\",\n    \"is_recyclable\": 0,\n    \"delivery_type\": 1,\n    \"delivery_date\": \"2023-01-30\",\n    \"is_paid\": 1,\n    \"product_name\": [\n        \"Product Name 1\",\n        \"Product Name 2\"\n    ],\n    \"quantity\": [\n        1,\n        2\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/task",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"task"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.10.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.2.34"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 24 Jan 2023 10:22:49 GMT"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, DELETE, OPTIONS"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Origin, Authorization, Access-Control-Allow-Headers, Cache-Control, X-Requested-With"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "XSRF-TOKEN=eyJpdiI6IjNIWkRSazk5YTNmdHhSc1ZGRlBFTEE9PSIsInZhbHVlIjoiQUJlM1FnQkhTeWpjS1BuZVNwUGh2Y0FLMFpzeUN5eTdlaUI3endXMnBHQUxkdHNxTjNoZWZrcUxWOWs5UE1RWiIsIm1hYyI6ImYxNTE0Y2UzOGVmZjM4ZjQ0NmIwODVjYmY2ZThkZjM5ODEyMDI2ZTQzYjEzZjdmOTMwZTM3YTgwMGRmMThlN2EifQ%3D%3D; expires=Tue, 24-Jan-2023 12:22:49 GMT; Max-Age=7200; path=/"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "laravel_session=JLINouIo08MtI95qFntWlUd0dHcpsLUJSLhM2lfa; expires=Tue, 24-Jan-2023 12:22:49 GMT; Max-Age=7200; path=/; httponly"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true\n}"
+				},
+				{
+					"name": "Create Task - Dostawa Standard z odbiorem produktów",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"delivery_number\": \"DN001\",\n    \"customer_name\": \"Joe Doe\",\n    \"customer_phone\": \"+48 111 222 333\",\n    \"delivery_address\": \"Delivery Street 1/2\",\n    \"delivery_postcode\": \"AB 001\",\n    \"delivery_city\": \"Customer City\",\n    \"is_recyclable\": 0,\n    \"delivery_type\": 1,\n    \"delivery_date\": \"2023-01-30\",\n    \"is_paid\": 1,\n    \"product_name\": [\n        \"Product Name 1\",\n        \"Product Name 2\"\n    ],\n    \"quantity\": [\n        1,\n        2\n    ],\n    \"product_receive_name\": [\n        \"Product Receive Name 1\",\n        \"Product Receive Name 2\"\n    ],\n    \"quantity_receive\": [\n        1,\n        2\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/task",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"task"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.10.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.2.34"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 24 Jan 2023 16:42:08 GMT"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, DELETE, OPTIONS"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Origin, Authorization, Access-Control-Allow-Headers, Cache-Control, X-Requested-With"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "XSRF-TOKEN=eyJpdiI6InZLMVE1WldPNzdZMm9LakJJTmpZWmc9PSIsInZhbHVlIjoieVZsaHFJZm50M3FLSExyYUFST3ZcL1B6VDZPRjNWc013VmRHXC82VFFHeXF2N2REQnRmUVZQQUMrZUhLaitGVWM3IiwibWFjIjoiNjBmYjdmODhkNDgzYTcwNDBkYzlhM2ZkY2VlNmYyOWNjM2JjMjcwNDEyNDQyMTY4NTdjYWQ2MWQzNjJmMzMzOSJ9; expires=Tue, 24-Jan-2023 18:42:08 GMT; Max-Age=7200; path=/"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "laravel_session=HzHoqDXDxZTACX4XBnBAGZvtPNJJd0FouU8fSbnW; expires=Tue, 24-Jan-2023 18:42:08 GMT; Max-Age=7200; path=/; httponly"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true\n}"
+				},
+				{
+					"name": "Create Task - Dostawa Express",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"delivery_number\": \"DN001\",\n    \"customer_name\": \"Joe Doe\",\n    \"customer_phone\": \"+48 111 222 333\",\n    \"delivery_address\": \"Delivery Street 1/2\",\n    \"delivery_postcode\": \"AB 001\",\n    \"delivery_city\": \"Customer City\",\n    \"is_recyclable\": 0,\n    \"delivery_type\": 2,\n    \"delivery_date\": \"2023-01-30\",\n    \"is_paid\": 1,\n    \"product_name\": [\n        \"Product Name 1\",\n        \"Product Name 2\"\n    ],\n    \"quantity\": [\n        1,\n        2\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/task",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"task"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.10.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.2.34"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 24 Jan 2023 10:24:47 GMT"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, DELETE, OPTIONS"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Origin, Authorization, Access-Control-Allow-Headers, Cache-Control, X-Requested-With"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "XSRF-TOKEN=eyJpdiI6IjUydWNSejlCZ3FKQmR4XC9lT0VmMkhRPT0iLCJ2YWx1ZSI6InNnWHV2MnhTelJGeVp4MFQ3cG9ycXk1UWxcL3dLR0JSUU5UY3laeTRjZ0FUblQzbGJWdnBQa2c2TEQ1Nkp5dUhRIiwibWFjIjoiZDM2YTcwOGI1ZTVmMDIyYzY1ODEwN2ZkNmI4Y2QyNjk1NmNmZjE2NmY1ZjAzMGE5YWZkM2MwYmUxY2FhZGYzYSJ9; expires=Tue, 24-Jan-2023 12:24:47 GMT; Max-Age=7200; path=/"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "laravel_session=JLINouIo08MtI95qFntWlUd0dHcpsLUJSLhM2lfa; expires=Tue, 24-Jan-2023 12:24:47 GMT; Max-Age=7200; path=/; httponly"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true\n}"
+				},
+				{
+					"name": "Create Task - Dostawa Express z odbiorem produktów",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"delivery_number\": \"DN001\",\n    \"customer_name\": \"Joe Doe\",\n    \"customer_phone\": \"+48 111 222 333\",\n    \"delivery_address\": \"Delivery Street 1/2\",\n    \"delivery_postcode\": \"AB 001\",\n    \"delivery_city\": \"Customer City\",\n    \"is_recyclable\": 0,\n    \"delivery_type\": 2,\n    \"delivery_date\": \"2023-01-30\",\n    \"is_paid\": 1,\n    \"product_name\": [\n        \"Product Name 1\",\n        \"Product Name 2\"\n    ],\n    \"quantity\": [\n        1,\n        2\n    ],\n    \"product_receive_name\": [\n        \"Product Receive Name 1\",\n        \"Product Receive Name 2\"\n    ],\n    \"quantity_receive\": [\n        1,\n        2\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/task",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"task"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.10.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.2.34"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 24 Jan 2023 16:42:49 GMT"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, DELETE, OPTIONS"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Origin, Authorization, Access-Control-Allow-Headers, Cache-Control, X-Requested-With"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "XSRF-TOKEN=eyJpdiI6IjhPR2o3bFB4b1orMHdqNEVYTnY4Q0E9PSIsInZhbHVlIjoicFR1cm9QcVFFQlN1Q29GWUFUeVF4UlZtdkZrcFBheEZJQ1hYcXhmY1wvT2V1TGNZdkprXC9VS2NRSUJZSEptVlB2IiwibWFjIjoiMmRlYjFkOThmODY2MjE1MzlhYzMzZWNiOGNhN2YzNDYyOWUzYzkzZDUyMTg5NWRhM2E1YjlkZWY1NTdjMzkzNSJ9; expires=Tue, 24-Jan-2023 18:42:49 GMT; Max-Age=7200; path=/"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "laravel_session=HzHoqDXDxZTACX4XBnBAGZvtPNJJd0FouU8fSbnW; expires=Tue, 24-Jan-2023 18:42:49 GMT; Max-Age=7200; path=/; httponly"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true\n}"
+				},
+				{
+					"name": "Create Task - Dostawa Super Express",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"delivery_number\": \"DN001\",\n    \"customer_name\": \"Joe Doe\",\n    \"customer_phone\": \"+48 111 222 333\",\n    \"delivery_address\": \"Delivery Street 1/2\",\n    \"delivery_postcode\": \"AB 001\",\n    \"delivery_city\": \"Customer City\",\n    \"is_recyclable\": 0,\n    \"delivery_type\": 3,\n    \"delivery_date\": \"2023-01-30\",\n    \"is_paid\": 1,\n    \"product_name\": [\n        \"Product Name 1\",\n        \"Product Name 2\"\n    ],\n    \"quantity\": [\n        1,\n        2\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/task",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"task"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.10.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.2.34"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 24 Jan 2023 10:25:16 GMT"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, DELETE, OPTIONS"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Origin, Authorization, Access-Control-Allow-Headers, Cache-Control, X-Requested-With"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "XSRF-TOKEN=eyJpdiI6InBOYXhvK3lXaVdoV1QrbVBJZ1Zlcnc9PSIsInZhbHVlIjoidFFFYVR5WmNjS0Ixd3hFRG5zakZISVBDMWVsNTNQVFhwWlllWmZjVWZ5NVFQRncraklcL2pLcHgzN01FR2xVaFMiLCJtYWMiOiJmYTQ4NWFkMmNiZjNmYWY2YmZkYWY0NWY4YjE5YWVhMTMzZjJmZjViOTNhN2FlMjkyYjc4Njk3MTYyYTBiM2YyIn0%3D; expires=Tue, 24-Jan-2023 12:25:16 GMT; Max-Age=7200; path=/"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "laravel_session=JLINouIo08MtI95qFntWlUd0dHcpsLUJSLhM2lfa; expires=Tue, 24-Jan-2023 12:25:16 GMT; Max-Age=7200; path=/; httponly"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true\n}"
+				},
+				{
+					"name": "Create Task - Dotawa Super Express z Odbiorem Produktów",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"delivery_number\": \"DN001\",\n    \"customer_name\": \"Joe Doe\",\n    \"customer_phone\": \"+48 111 222 333\",\n    \"delivery_address\": \"Delivery Street 1/2\",\n    \"delivery_postcode\": \"AB 001\",\n    \"delivery_city\": \"Customer City\",\n    \"is_recyclable\": 0,\n    \"delivery_type\": 3,\n    \"delivery_date\": \"2023-01-30\",\n    \"is_paid\": 1,\n    \"product_name\": [\n        \"Product Name 1\",\n        \"Product Name 2\"\n    ],\n    \"quantity\": [\n        1,\n        2\n    ],\n    \"product_receive_name\": [\n        \"Product Receive Name 1\",\n        \"Product Receive Name 2\"\n    ],\n    \"quantity_receive\": [\n        1,\n        2\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/task",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"task"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.10.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.2.34"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 24 Jan 2023 16:43:36 GMT"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, DELETE, OPTIONS"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Origin, Authorization, Access-Control-Allow-Headers, Cache-Control, X-Requested-With"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "XSRF-TOKEN=eyJpdiI6Ijhqb2VuNlh6eTBjYTJoS0kwK2s3bUE9PSIsInZhbHVlIjoiakZxczl1cHBiSW9LVHVHZmJMTVE3dlZrblNjZ2pWb0hUUEJBd0NwbFRuQUdLUmI2RVpcL0NzZzBUV3FZTm1PdnMiLCJtYWMiOiI5YzQ2YTE1YmE5NjQzYjdjNWNiZTE5MDI4NWY0OTNiNDgxOTFmZTQ3NGIwODM0MmVkM2I5NDU1YjQ2NzJkYWVjIn0%3D; expires=Tue, 24-Jan-2023 18:43:36 GMT; Max-Age=7200; path=/"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "laravel_session=HzHoqDXDxZTACX4XBnBAGZvtPNJJd0FouU8fSbnW; expires=Tue, 24-Jan-2023 18:43:36 GMT; Max-Age=7200; path=/; httponly"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true\n}"
+				},
+				{
+					"name": "Create Task - Reklamacja",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"customer_name\": \"Joe Doe\",\n    \"customer_phone\": \"+48 111 222 333\",\n    \"delivery_address\": \"Delivery Street 1/2\",\n    \"delivery_postcode\": \"AB 001\",\n    \"delivery_city\": \"Customer City\",\n    \"is_recyclable\": 0,\n    \"delivery_type\": 4,\n    \"delivery_date\": \"2023-01-30\",\n    \"is_paid\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/task",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"task"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.10.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.2.34"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 24 Jan 2023 10:27:42 GMT"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, DELETE, OPTIONS"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Origin, Authorization, Access-Control-Allow-Headers, Cache-Control, X-Requested-With"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "XSRF-TOKEN=eyJpdiI6ImVPMURpSTNCN2xuMENhXC9WTDBROEFBPT0iLCJ2YWx1ZSI6IkNscnNlbkRJNklyTzNFa2k1bm9EVTBnVUJQSEd2TFo3TFhpQnFBaDcwaDNuUUEwaUk4M3M0YytzR2hxS3ZaV2wiLCJtYWMiOiJiYzQwYWM0ZjI1ZTgzMzhjMGRhMjQ3NTE5NGRkNTQyMGM1NmRkNDExN2E2YzdkNWE4MDY3NmY2ODdkMTAyODlmIn0%3D; expires=Tue, 24-Jan-2023 12:27:42 GMT; Max-Age=7200; path=/"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "laravel_session=JLINouIo08MtI95qFntWlUd0dHcpsLUJSLhM2lfa; expires=Tue, 24-Jan-2023 12:27:42 GMT; Max-Age=7200; path=/; httponly"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "Cancel Task",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{api_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"delivery_number\": \"DN001\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/task",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"task"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Cancel Task - Success",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"delivery_number\": \"DN001\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/task",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"task"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.10.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.2.34"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 06 Feb 2023 18:31:14 GMT"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, DELETE, OPTIONS"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Origin, Authorization, Access-Control-Allow-Headers, Cache-Control, X-Requested-With"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "XSRF-TOKEN=eyJpdiI6IlorYmdjdUVwUVdZSFBVMzBWdzNLYlE9PSIsInZhbHVlIjoiaGhXbWRKSDF1eThmaTc5ZFpEWm91RWYxSlBsaHZwQmdaMkhyS0h3dkdnWnllY0R6R0R4dWxcL2RyRWJtbVEwVE0iLCJtYWMiOiJjMjQwYjdjMDc2N2YzZTAwZTU3Yjg3NmYxODc4NzZmN2Q4Mzc3YTBhMTc4ODBiZTMwN2Q0ZTA3NjNmYjVkOTk2In0%3D; expires=Mon, 06-Feb-2023 20:31:14 GMT; Max-Age=7200; path=/"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "laravel_session=cERqw9E1UwBjvRR038GptN9nvn0NlZaPNEPNFxKo; expires=Mon, 06-Feb-2023 20:31:14 GMT; Max-Age=7200; path=/; httponly"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"errors\": []\n}"
+				},
+				{
+					"name": "Cancel Task - Failure 1",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"delivery_number\": \"DN003\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/task",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"task"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.10.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.2.34"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 13 Feb 2023 07:50:29 GMT"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, DELETE, OPTIONS"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Origin, Authorization, Access-Control-Allow-Headers, Cache-Control, X-Requested-With"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "XSRF-TOKEN=eyJpdiI6Im5OcG1tNHJTXC94Nm1wNFAxNnJ5VE1RPT0iLCJ2YWx1ZSI6ImdiRnFyZG5uUzg5QlVVaFNucUQ4VFlTQXkxdUhCZjJTSlhNQnNvU3BwTnVPTm1MV2xcLzEwUDJsUUJpaXlKWGU3IiwibWFjIjoiMzhiYWY5M2FiOTk2MTkxZjhmNmZjYzcxOTNiNTMyYmY5YzY1YmI5ZDVmNjczZmFjNjhhYzc2Y2JkMDljMTc0NyJ9; expires=Mon, 13-Feb-2023 09:50:29 GMT; Max-Age=7200; path=/"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "laravel_session=Q0TOxJxhR5tha1FdzhGkwk8mU7RHXRBrIhlDh6HI; expires=Mon, 13-Feb-2023 09:50:29 GMT; Max-Age=7200; path=/; httponly"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": false,\n    \"errors\": {\n        \"delivery_number\": [\n            \"Pole ma nieprawidłową wartość\"\n        ]\n    }\n}"
+				},
+				{
+					"name": "Cancel Task - Failure 2",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"delivery_number\": \"DN001\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/task",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"task"
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.10.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.2.34"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 13 Feb 2023 07:48:28 GMT"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, DELETE, OPTIONS"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Origin, Authorization, Access-Control-Allow-Headers, Cache-Control, X-Requested-With"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "XSRF-TOKEN=eyJpdiI6ImZ5K256YTNoWFplQzcxR2pcL2NtZml3PT0iLCJ2YWx1ZSI6IjRVTWRTMEkza2RzNnhaRnpWWElcL2JwbGFwOVlxTmRpeWlKa01cLzVHOHR4cWNSK0E5bFBMNEp2Q0YrblpPcnJHciIsIm1hYyI6ImMxMDU0NDNhYmUwYWU0MDQ4NWUxNzA0MGY4MDM3MDM5M2UxNzBhNmY1NjI1YzVmMWIyNDJiM2FlMDVjYWJiNzAifQ%3D%3D; expires=Mon, 13-Feb-2023 09:48:28 GMT; Max-Age=7200; path=/"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "laravel_session=Q0TOxJxhR5tha1FdzhGkwk8mU7RHXRBrIhlDh6HI; expires=Mon, 13-Feb-2023 09:48:28 GMT; Max-Age=7200; path=/; httponly"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": false,\n    \"errors\": [],\n    \"message\": \"Task DN001 cannot be cancelled. Current task status: Zlecenie anulowane\"\n}"
+				},
+				{
+					"name": "Cancel Task - Failure 3",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"delivery_number\": \"DN003\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/task",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"task"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.10.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.2.34"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 13 Feb 2023 07:51:52 GMT"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, DELETE, OPTIONS"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Origin, Authorization, Access-Control-Allow-Headers, Cache-Control, X-Requested-With"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "XSRF-TOKEN=eyJpdiI6Im9MV2IzK3RtWTRUUkJyUTFIaHkrYlE9PSIsInZhbHVlIjoiYndaQlE0UG1WYzBUQ3QwRGtHTGpCZ1Uxd0J6b093K3ZIZG5GcTVnUnZTdUFRSVhmVHBDNU5NcWdyRmRiTVdcL2kiLCJtYWMiOiI0NDRlZmIxNmQ0OGE1NDQyZjlkMDgzOGQwZGU4NGQ0MDVmZGMzYmZhNGQ5NTAxMzYxOTBkZTgzNTUyYzk3NzRkIn0%3D; expires=Mon, 13-Feb-2023 09:51:52 GMT; Max-Age=7200; path=/"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "laravel_session=Q0TOxJxhR5tha1FdzhGkwk8mU7RHXRBrIhlDh6HI; expires=Mon, 13-Feb-2023 09:51:52 GMT; Max-Age=7200; path=/; httponly"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": false,\n    \"errors\": [],\n    \"message\": \"Invalid token\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Basic Tasks List",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{api_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"delivery_number\": \"DN001\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/tasks_list",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"tasks_list"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Basic Tasks List - Success by number",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"delivery_number\": \"DN001\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/tasks_list",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"tasks_list"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.10.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.2.34"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 14 Feb 2023 14:49:50 GMT"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, DELETE, OPTIONS"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Origin, Authorization, Access-Control-Allow-Headers, Cache-Control, X-Requested-With"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "XSRF-TOKEN=eyJpdiI6IktwOEVQTWxyemxYUnRDQkc2azJhclE9PSIsInZhbHVlIjoiVHVUcVBRZFMxZTdnakNCMmw4bU9wYkNidFdCc1ptYUxzR2F2OUMzK0ZPSXY0eTl1U1NaZVpcL250Q2tqcFRKK2ciLCJtYWMiOiI0NDI3MmI5Y2NmZjljZDk2Mjc2ZTBlOGYwNGNhYzY1NTQ5MjE3YmQ4MjIwOGFhOTMzNjliMzcxZDZlZGNiYWUxIn0%3D; expires=Tue, 14-Feb-2023 16:49:50 GMT; Max-Age=7200; path=/"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "laravel_session=WXwi1DKB0v5PfumlaIgZS4ZOZlqB7EP1Qunu3tTa; expires=Tue, 14-Feb-2023 16:49:50 GMT; Max-Age=7200; path=/; httponly"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"delivery_number\": \"DN001\",\n            \"status\": \"Zlecenie anulowane\"\n        },\n        {\n            \"delivery_number\": \"DN001\",\n            \"status\": \"Zlecenie gotowe do pobrania\"\n        },\n        {\n            \"delivery_number\": \"DN001\",\n            \"status\": \"Zlecenie gotowe do pobrania\"\n        }\n    ]\n}"
+				},
+				{
+					"name": "Get Basic Tasks List - Success by date",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"delivery_date\": \"2023-02-13\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/tasks_list",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"tasks_list"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.10.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.2.34"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 14 Feb 2023 14:54:49 GMT"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, DELETE, OPTIONS"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Origin, Authorization, Access-Control-Allow-Headers, Cache-Control, X-Requested-With"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "XSRF-TOKEN=eyJpdiI6Iml6SEJ0enZBNWlUZll1RmM2cGIyQmc9PSIsInZhbHVlIjoiUHRJSWZOV20yS2VXbFdwRUpLcHhVQVFQRzlZa0F0Y0ltZFZOUVRJalNVeVZ4akFiT1hackJjaFkzRlhcL25qOXkiLCJtYWMiOiJlNTBlMGUzYjU5ODY0NGQ0MTM4YzYyYmYwMTUxMTY0YzVjNjEzM2NiOWM1M2M5MGI0NjcwMDViY2RiNzVkZGE5In0%3D; expires=Tue, 14-Feb-2023 16:54:49 GMT; Max-Age=7200; path=/"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "laravel_session=WXwi1DKB0v5PfumlaIgZS4ZOZlqB7EP1Qunu3tTa; expires=Tue, 14-Feb-2023 16:54:49 GMT; Max-Age=7200; path=/; httponly"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"delivery_number\": \"DN001\",\n            \"status\": \"Zlecenie anulowane\"\n        }\n    ]\n}"
+				},
+				{
+					"name": "Get Basic Tasks List - Failure 1",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/tasks_list",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"tasks_list"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.10.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.2.34"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 06 Feb 2023 20:01:19 GMT"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, DELETE, OPTIONS"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Origin, Authorization, Access-Control-Allow-Headers, Cache-Control, X-Requested-With"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "XSRF-TOKEN=eyJpdiI6Im43RTJ2dkQzVHB0UDQrNzh5dkpNTlE9PSIsInZhbHVlIjoicVRUSmdRK0krSW54SCt2clNnNk9KSER1UTBPU0thaWxWK0Z1RmQ5N2l0Mng1ZldFRlppY3BjRzBVSjY5V0orbyIsIm1hYyI6IjRhMzkxYTQxYjk4YWMxMWNmOTlmZmQ1MWUxYjVhOTNhMTVkOTIzMTRhMmIwNjk0ZTg5NGYzMTgwNzMyN2EwMTkifQ%3D%3D; expires=Mon, 06-Feb-2023 22:01:19 GMT; Max-Age=7200; path=/"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "laravel_session=cERqw9E1UwBjvRR038GptN9nvn0NlZaPNEPNFxKo; expires=Mon, 06-Feb-2023 22:01:19 GMT; Max-Age=7200; path=/; httponly"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": false,\n    \"errors\": {\n        \"delivery_date\": [\n            \"At least one parameter is required.\"\n        ],\n        \"delivery_number\": [\n            \"At least one parameter is required.\"\n        ]\n    }\n}"
+				},
+				{
+					"name": "Get Basic Tasks List - Failure 2",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"delivery_number\": \"DN001\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/tasks_list",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"tasks_list"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.10.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.2.34"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 13 Feb 2023 07:52:20 GMT"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, DELETE, OPTIONS"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Origin, Authorization, Access-Control-Allow-Headers, Cache-Control, X-Requested-With"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "XSRF-TOKEN=eyJpdiI6Ilo3QTAzckhNdEZyWGh6NHgweHBjUkE9PSIsInZhbHVlIjoiZ2h5XC90UnFibUVCNWxVSlI0NVJvMTIyaHAwaGVOVk5tOFFnSUoyTUFQN1wvdFNGUktQYktuZlpOeFkwYzZaamk5IiwibWFjIjoiNDlmYmI3OWQ1NzcwOWVmYjgyOGYxZTUyZTYxMjFmOGVmYjZmN2ZmZTE1YmY2NzQ5YzA4ZDNlYmU3ZjMxNzVlMiJ9; expires=Mon, 13-Feb-2023 09:52:20 GMT; Max-Age=7200; path=/"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "laravel_session=Q0TOxJxhR5tha1FdzhGkwk8mU7RHXRBrIhlDh6HI; expires=Mon, 13-Feb-2023 09:52:20 GMT; Max-Age=7200; path=/; httponly"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": false,\n    \"errors\": [],\n    \"message\": \"Invalid token\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Detailed Tasks List",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{api_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"delivery_number\": \"DN001\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/tasks_list_detailed",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"tasks_list_detailed"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Detailed Tasks List - Success by number",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"delivery_number\": \"DN001\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/tasks_list_detailed",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"tasks_list_detailed"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.10.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.2.34"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 14 Feb 2023 14:56:38 GMT"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, DELETE, OPTIONS"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Origin, Authorization, Access-Control-Allow-Headers, Cache-Control, X-Requested-With"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "XSRF-TOKEN=eyJpdiI6Ikt3ak5vQ0preXpCNFZxYWc5KzE1cGc9PSIsInZhbHVlIjoiMW5LbnR1Y3N1R2hxUmQ5YjQxTVpCcjY3THBJR3VcLzBqUFpaZHhXMDlTa0F1UGxBNklNQ3U2bnlOMGp0QUJjdEciLCJtYWMiOiI3NTk0Yzc3OTg4MmI4NDM3OWU3YjIxODg4M2U2MDhkMWQ3YmYzMjIxZmJkODE3OGFmNzQwZTI4ZGY1NWVjZTRhIn0%3D; expires=Tue, 14-Feb-2023 16:56:38 GMT; Max-Age=7200; path=/"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "laravel_session=WXwi1DKB0v5PfumlaIgZS4ZOZlqB7EP1Qunu3tTa; expires=Tue, 14-Feb-2023 16:56:38 GMT; Max-Age=7200; path=/; httponly"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"market_code\": \"O2243\",\n            \"delivery_number\": \"DN001\",\n            \"customer_name\": \"Joe Doe\",\n            \"delivery_address\": \"Delivery Street 1/2\",\n            \"delivery_postcode\": \"02-001\",\n            \"delivery_city\": \"Customer City\",\n            \"additional_info\": \"Please contact customer before delivery.\",\n            \"is_recyclable\": 0,\n            \"delivery_type\": {\n                \"id\": 3,\n                \"name\": \"Super Express\"\n            },\n            \"status\": \"Zlecenie anulowane\",\n            \"delivery_range\": 1,\n            \"delivery_date\": \"2023-02-04\",\n            \"is_paid\": 1,\n            \"amount_to_pay\": 0,\n            \"products_sent\": [\n                {\n                    \"product_name\": \"Product Name 1\",\n                    \"quantity\": 1\n                },\n                {\n                    \"product_name\": \"Product Name 2\",\n                    \"quantity\": 2\n                }\n            ],\n            \"products_received\": [\n                {\n                    \"product_name\": \"Product Receive Name 1\",\n                    \"quantity\": 1\n                },\n                {\n                    \"product_name\": \"Product Receive Name 2\",\n                    \"quantity\": 2\n                }\n            ],\n            \"services\": [\n                {\n                    \"mdi_group\": \"KTCH_BSC\",\n                    \"description\": \"INSTALACJA AGD KUCHNIE PODSTAWOWY\",\n                    \"is_done\": \"Niewykonana\"\n                }\n            ]\n        }\n    ]\n}"
+				},
+				{
+					"name": "Get Detailed Tasks List - Success by date",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"delivery_date\": \"2023-02-04\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/tasks_list_detailed",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"tasks_list_detailed"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.10.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.2.34"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 14 Feb 2023 15:08:55 GMT"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, DELETE, OPTIONS"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Origin, Authorization, Access-Control-Allow-Headers, Cache-Control, X-Requested-With"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "XSRF-TOKEN=eyJpdiI6ImtXMWJRNHNmcHhvZkVEQkZIbGdDeHc9PSIsInZhbHVlIjoiR0gyWWRXWFpRcFNNK1ZZWmNoVzg4NU5BVUxPUzVRak5xeE1SQlhYSmNWNDBXSXFsK1hGUGFwV1Q1QmZ0K2RkNyIsIm1hYyI6ImNlMGQ5NDQyZDA5NDNiMjY5OWVhMTE1MzIzMjk2ZTBhODgyOGZhNjhjZDRmZTE5ODE4NjgwNDY4MDUzNzUwNzgifQ%3D%3D; expires=Tue, 14-Feb-2023 17:08:55 GMT; Max-Age=7200; path=/"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "laravel_session=WXwi1DKB0v5PfumlaIgZS4ZOZlqB7EP1Qunu3tTa; expires=Tue, 14-Feb-2023 17:08:55 GMT; Max-Age=7200; path=/; httponly"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"market_code\": \"O2243\",\n            \"delivery_number\": \"DN001\",\n            \"customer_name\": \"Joe Doe\",\n            \"delivery_address\": \"Delivery Street 1/2\",\n            \"delivery_postcode\": \"02-001\",\n            \"delivery_city\": \"Customer City\",\n            \"additional_info\": \"Please contact customer before delivery.\",\n            \"is_recyclable\": 0,\n            \"delivery_type\": {\n                \"id\": 3,\n                \"name\": \"Super Express\"\n            },\n            \"status\": \"Zlecenie anulowane\",\n            \"delivery_range\": 1,\n            \"delivery_date\": \"2023-02-04\",\n            \"is_paid\": 1,\n            \"amount_to_pay\": 0,\n            \"products_sent\": [\n                {\n                    \"product_name\": \"Product Name 1\",\n                    \"quantity\": 1\n                },\n                {\n                    \"product_name\": \"Product Name 2\",\n                    \"quantity\": 2\n                }\n            ],\n            \"products_received\": [\n                {\n                    \"product_name\": \"Product Receive Name 1\",\n                    \"quantity\": 1\n                },\n                {\n                    \"product_name\": \"Product Receive Name 2\",\n                    \"quantity\": 2\n                }\n            ],\n            \"services\": [\n                {\n                    \"mdi_group\": \"KTCH_BSC\",\n                    \"description\": \"INSTALACJA AGD KUCHNIE PODSTAWOWY\",\n                    \"is_done\": \"Niewykonana\"\n                }\n            ]\n        }\n    ]\n}"
+				},
+				{
+					"name": "Get Detailed Tasks List - Failure",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/tasks_list_detailed",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"tasks_list_detailed"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.10.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.2.34"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 06 Feb 2023 20:36:33 GMT"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, DELETE, OPTIONS"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Origin, Authorization, Access-Control-Allow-Headers, Cache-Control, X-Requested-With"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "XSRF-TOKEN=eyJpdiI6IkljYXR4ZkdWVGJ1OHJVT2JPREdTb0E9PSIsInZhbHVlIjoiK05DbWpNXC9vZmMxc2tmUDlEVVZJXC9uK0wrcGo4cHc3WWdyWlpVRm5GbTdITXdqQk96dUY3OFN3ZGdvUnY0cnI3IiwibWFjIjoiODEwNzU5NDcxOWE2ZmE3NDlmYzAwYTczZDg1YzUyMjU4ZmI2OTljZmUwZjRjZjBmYmE0OTgwZjA4MzEzNWFlOCJ9; expires=Mon, 06-Feb-2023 22:36:33 GMT; Max-Age=7200; path=/"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "laravel_session=cERqw9E1UwBjvRR038GptN9nvn0NlZaPNEPNFxKo; expires=Mon, 06-Feb-2023 22:36:33 GMT; Max-Age=7200; path=/; httponly"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": false,\n    \"errors\": {\n        \"delivery_date\": [\n            \"At least one parameter is required.\"\n        ],\n        \"delivery_number\": [\n            \"At least one parameter is required.\"\n        ]\n    }\n}"
+				},
+				{
+					"name": "Get Detailed Tasks List - Failure 2",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"delivery_number\": \"DN001\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/tasks_list_detailed",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"tasks_list_detailed"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.10.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.2.34"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 13 Feb 2023 07:52:42 GMT"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, DELETE, OPTIONS"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Origin, Authorization, Access-Control-Allow-Headers, Cache-Control, X-Requested-With"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "XSRF-TOKEN=eyJpdiI6IlZ5YlwvaTRScFd1bXZOYk9hbmxJXC9WUT09IiwidmFsdWUiOiJCU0tmd0IwTGF1ZEdhK3BoQ1pyS2hRMldCcTdPbzZhMlBzWHZZSFBXeUVLZzd1YTZkMytOU3FrSFdVcGkyNlpVIiwibWFjIjoiMGFkYWQxNjUzZTZhOGQ0MGQ3ODgxNjg0MDU0YmJiMjllODdkZjRmMTI2YzYyMDJjN2I0YjNhOTI4M2E5NmE2OSJ9; expires=Mon, 13-Feb-2023 09:52:42 GMT; Max-Age=7200; path=/"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "laravel_session=Q0TOxJxhR5tha1FdzhGkwk8mU7RHXRBrIhlDh6HI; expires=Mon, 13-Feb-2023 09:52:42 GMT; Max-Age=7200; path=/; httponly"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": false,\n    \"errors\": [],\n    \"message\": \"Invalid token\"\n}"
+				}
+			]
+		}
+	]
+}
