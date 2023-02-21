@@ -15,4 +15,4 @@ Token Based Authorization (Bearer Token)
 
 ## Documentation
 - API documentation is available [here](docs/API.md)
-- Postman initial configuration is available [here](postman/Travers API.postman_collection.json)
+- Postman initial configuration is available [here](postman/Travers%20API.postman_collection.json)
