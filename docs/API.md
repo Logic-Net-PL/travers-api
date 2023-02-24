@@ -163,6 +163,61 @@ Response
 }
 ```
 
+## Update task
+Task can be updated until delivery will be started by courier.
+
+Request
+
+`PATCH /task`
+
+Payload
+
+```json
+{
+  "market_code": "O2243",
+  "delivery_number": "DN001",
+  "customer_name": "Joe Doe",
+  "customer_phone": "+48 111 222 333",
+  "delivery_address": "Delivery Street 1/2",
+  "delivery_postcode": "02-001",
+  "delivery_city": "Customer City",
+  "additional_info": "Please contact customer before delivery.",
+  "is_recyclable": 0,
+  "delivery_type": 3,
+  "delivery_range": 1,
+  "delivery_date": "2023-02-13",
+  "is_paid": 1,
+  "amount_to_pay": 0,
+  "product_name": [
+    "Product Name 1",
+    "Product Name 2"
+  ],
+  "quantity": [
+    1,
+    2
+  ],
+  "product_receive_name": [
+    "Product Receive Name 1",
+    "Product Receive Name 2"
+  ],
+  "quantity_receive": [
+    1,
+    2
+  ],
+  "service_name": [
+    "KTCH_BSC"
+  ]
+}
+```
+
+Response
+
+```json
+{
+  "success": true
+}
+```
+
 ## Cancel task
 Task can be cancelled until delivery will be started by courier.
 

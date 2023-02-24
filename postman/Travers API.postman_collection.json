@@ -894,7 +894,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"market_code\": \"O2243\",\n    \"delivery_number\": \"DN001\",\n    \"customer_name\": \"Joe Doe\",\n    \"customer_phone\": \"+48 111 222 333\",\n    \"delivery_address\": \"Delivery Street 1/2\",\n    \"delivery_postcode\": \"02-001\",\n    \"delivery_city\": \"Customer City\",\n    \"additional_info\": \"Please contact customer before delivery.\",\n    \"is_recyclable\": 0,\n    \"delivery_type\": 3,\n    \"delivery_range\": 1,\n    \"delivery_date\": \"2023-02-13\",\n    \"is_paid\": 1,\n    \"amount_to_pay\": 0,\n    \"product_name\": [\n        \"Product Name 1\",\n        \"Product Name 2\"\n    ],\n    \"quantity\": [\n        1,\n        2\n    ],\n    \"product_receive_name\": [\n        \"Product Receive Name 1\",\n        \"Product Receive Name 2\"\n    ],\n    \"quantity_receive\": [\n        1,\n        2\n    ],\n    \"service_name\": [\n        \"KTCH_BSC\"   \n    ]\n}",
+					"raw": "{\n    \"market_code\": \"O01234\",\n    \"delivery_number\": \"DN001-LN\",\n    \"customer_name\": \"Joe Doe\",\n    \"customer_phone\": \"+48 111 222 333\",\n    \"delivery_address\": \"Delivery Street 1/2\",\n    \"delivery_postcode\": \"02-001\",\n    \"delivery_city\": \"Customer City\",\n    \"additional_info\": \"Please contact customer before delivery.\",\n    \"is_recyclable\": 0,\n    \"delivery_type\": 3,\n    \"delivery_range\": 1,\n    \"delivery_date\": \"2023-02-24\",\n    \"is_paid\": 1,\n    \"amount_to_pay\": 0,\n    \"product_name\": [\n        \"Product Name 1\",\n        \"Product Name 2\"\n    ],\n    \"quantity\": [\n        1,\n        2\n    ],\n    \"product_receive_name\": [\n        \"Product Receive Name 1\",\n        \"Product Receive Name 2\"\n    ],\n    \"quantity_receive\": [\n        1,\n        2\n    ],\n    \"service_name\": [\n        \"KTCH_BSC\"   \n    ]\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -1467,6 +1467,203 @@
 						{
 							"key": "Set-Cookie",
 							"value": "laravel_session=JLINouIo08MtI95qFntWlUd0dHcpsLUJSLhM2lfa; expires=Tue, 24-Jan-2023 12:27:42 GMT; Max-Age=7200; path=/; httponly"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "Update Task",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{api_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"market_code\": \"O01234\",\n    \"delivery_number\": \"DN001-LN\",\n    \"customer_name\": \"Joe Doe\",\n    \"customer_phone\": \"+48 111 222 333\",\n    \"delivery_address\": \"Delivery Street 1/2\",\n    \"delivery_postcode\": \"02-001\",\n    \"delivery_city\": \"Customer City\",\n    \"additional_info\": \"Please contact customer before delivery.\",\n    \"is_recyclable\": 0,\n    \"delivery_type\": 3,\n    \"delivery_range\": 1,\n    \"delivery_date\": \"2023-02-24\",\n    \"is_paid\": 1,\n    \"amount_to_pay\": 0,\n    \"product_name\": [\n        \"Product Name 1\",\n        \"Product Name 2\"\n    ],\n    \"quantity\": [\n        1,\n        2\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/task",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"task"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update Task - Failure",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"market_code\": \"O2243\",\n    \"delivery_number\": \"DN002\",\n    \"customer_name\": \"Joe Doe\",\n    \"customer_phone\": \"+48 111 222 333\",\n    \"delivery_address\": \"Delivery Street 1/2\",\n    \"delivery_postcode\": \"02-001\",\n    \"delivery_city\": \"Customer City\",\n    \"additional_info\": \"Please contact customer before delivery.\",\n    \"is_recyclable\": 0,\n    \"delivery_type\": 3,\n    \"delivery_range\": 1,\n    \"delivery_date\": \"2023-02-19\",\n    \"is_paid\": 1,\n    \"amount_to_pay\": 0,\n    \"product_name\": [\n        \"Product Name 1\",\n        \"Product Name 2\"\n    ],\n    \"quantity\": [\n        1,\n        2\n    ],\n    \"product_receive_name\": [\n        \"Product Receive Name 1\",\n        \"Product Receive Name 2\"\n    ],\n    \"quantity_receive\": [\n        1,\n        2\n    ],\n    \"service_name\": [\n        \"KTCH_BSC\"   \n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/task",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"task"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.10.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.2.34"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 24 Feb 2023 11:00:39 GMT"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, DELETE, OPTIONS"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Origin, Authorization, Access-Control-Allow-Headers, Cache-Control, X-Requested-With"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "XSRF-TOKEN=eyJpdiI6Ilp1Q3RZbjdjZlE4QlV2aU5vV0Y5K0E9PSIsInZhbHVlIjoibTZYTmh3czBKbzVCdFNmTitRNWZ4a1ZQYU5iakNkY2d1MW81d09yRVwvTmNZZkZuYWVldGc3a3daZ1NVQ1pVTXMiLCJtYWMiOiIyNmEzMWMxMDZkNDBmOTIyZjlkMjM0ZTc5NjhiNWMxMjlhNGFmMGFlMzFlNDgzOGJiMDkxNWM5ZjUxMTYxZmRlIn0%3D; expires=Fri, 24-Feb-2023 13:00:39 GMT; Max-Age=7200; path=/"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "laravel_session=YzeNoTBYNhe7yKhwLYoWdhluOiABUJvz9SEYLI04; expires=Fri, 24-Feb-2023 13:00:39 GMT; Max-Age=7200; path=/; httponly"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": false,\n    \"errors\": [\n        \"delivery_date value is invalid. As soon possible date is today\",\n        \"delivery_number value is invalid\"\n    ]\n}"
+				},
+				{
+					"name": "Update Task - Success",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"market_code\": \"O2243\",\n    \"delivery_number\": \"DN002\",\n    \"customer_name\": \"Joe Doe\",\n    \"customer_phone\": \"+48 111 222 333\",\n    \"delivery_address\": \"Delivery Street 1/2\",\n    \"delivery_postcode\": \"02-001\",\n    \"delivery_city\": \"Customer City\",\n    \"additional_info\": \"Please contact customer before delivery.\",\n    \"is_recyclable\": 0,\n    \"delivery_type\": 3,\n    \"delivery_range\": 1,\n    \"delivery_date\": \"2023-02-24\",\n    \"is_paid\": 1,\n    \"amount_to_pay\": 0,\n    \"product_name\": [\n        \"Product Name 3\"\n    ],\n    \"quantity\": [\n        1\n    ],\n    \"product_receive_name\": [\n        \"Product Receive Name 1\"\n    ],\n    \"quantity_receive\": [\n        1\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/task",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"task"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.10.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.2.34"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 24 Feb 2023 11:33:11 GMT"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, DELETE, OPTIONS"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Origin, Authorization, Access-Control-Allow-Headers, Cache-Control, X-Requested-With"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "XSRF-TOKEN=eyJpdiI6Iko4dDVPK0xHZjJsVWpMYVdZQ0lQNXc9PSIsInZhbHVlIjoiUzNDZktZNEdmWERJOXdHYW5JNTdpZVREWGF2c2NQXC9JSWpkZTJ1bnR4VXl5ZG1pMklZUWRNSTRFRytcL1c1MlwvQSIsIm1hYyI6IjVlZDRkODdlNTRjZjA5NjgxNjBhZTRjODk2YTJkMzYzYzA1YzA5MzAzZDFlOTlmMjQ5NTQwMzU0MDY1NzhiMWQifQ%3D%3D; expires=Fri, 24-Feb-2023 13:33:11 GMT; Max-Age=7200; path=/"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "laravel_session=YzeNoTBYNhe7yKhwLYoWdhluOiABUJvz9SEYLI04; expires=Fri, 24-Feb-2023 13:33:11 GMT; Max-Age=7200; path=/; httponly"
 						}
 					],
 					"cookie": [],
