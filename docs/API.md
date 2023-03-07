@@ -31,7 +31,7 @@ Response
       "street": "ALPEJSKA 6",
       "city": "Katowice",
       "postcode": "40-506",
-      "sap_code": "O2243"
+      "code": "P123"
     }
   ]
 }
@@ -127,7 +127,6 @@ Payload
   "delivery_postcode": "02-001",
   "delivery_city": "Customer City",
   "additional_info": "Please contact customer before delivery.",
-  "is_recyclable": 0,
   "delivery_type": 3,
   "delivery_range": 1,
   "delivery_date": "2023-02-13",
@@ -138,14 +137,6 @@ Payload
     "Product Name 2"
   ],
   "quantity": [
-    1,
-    2
-  ],
-  "product_receive_name": [
-    "Product Receive Name 1",
-    "Product Receive Name 2"
-  ],
-  "quantity_receive": [
     1,
     2
   ],
@@ -182,7 +173,6 @@ Payload
   "delivery_postcode": "02-001",
   "delivery_city": "Customer City",
   "additional_info": "Please contact customer before delivery.",
-  "is_recyclable": 0,
   "delivery_type": 3,
   "delivery_range": 1,
   "delivery_date": "2023-02-13",
@@ -193,14 +183,6 @@ Payload
     "Product Name 2"
   ],
   "quantity": [
-    1,
-    2
-  ],
-  "product_receive_name": [
-    "Product Receive Name 1",
-    "Product Receive Name 2"
-  ],
-  "quantity_receive": [
     1,
     2
   ],
@@ -303,7 +285,6 @@ Response
       "delivery_postcode": "02-001",
       "delivery_city": "Customer City",
       "additional_info": "Please contact customer before delivery.",
-      "is_recyclable": 0,
       "delivery_type": {
         "id": 3,
         "name": "Super Express"
@@ -323,16 +304,6 @@ Response
           "quantity": 2
         }
       ],
-      "products_received": [
-        {
-          "product_name": "Product Receive Name 1",
-          "quantity": 1
-        },
-        {
-          "product_name": "Product Receive Name 2",
-          "quantity": 2
-        }
-      ],
       "services": [
         {
           "mdi_group": "KTCH_BSC",
@@ -349,13 +320,13 @@ Response
 Definition of key API objects
 
 ### Market
-| Property     | Type   | Description                                       |
-|--------------|--------|---------------------------------------------------|
-| `$.name`     | string | Market name                                       |
-| `$.street`   | string | Market address 1                                  |
-| `$.city`     | string | Market address 2                                  |
-| `$.postcode` | string | Market address 3                                  |
-| `$.sap_code`  | string | SAP Code (MDI Code) for future integration usage. |
+| Property  | Type   | Description                                      |
+|-----------|--------|--------------------------------------------------|
+| `$.name`  | string | Market name                                      |
+| `$.street` | string | Market address 1                                 |
+| `$.city`  | string | Market address 2                                 |
+| `$.postcode` | string | Market address 3                                 |
+| `$.code`  | string | MDI Code for future integration usage. |
 
 ### Delivery Type
 | Property | Type    | Description                                       |
@@ -387,7 +358,6 @@ Definition of key API objects
 | `$.delivery_postcode`        | string         | YES      | Delivery address 2                                              |
 | `$.delivery_city`            | string         | YES      | Delivery address 3                                              |
 | `$.additional_info`          | string         | YES      | Additional information for delivery                             |
-| `$.is_recyclable`            | tinyint(1)     | YES      | Mark in case if courier should receive some goods from customer |
 | `$.delivery_type`            | int(11)        | YES      | Please check _Delivery type_                                    |
 | `$.delivery_range`           | int(11)        | YES      | Please check _Delivery range_                                   |
 | `$.delivery_date`            | datetime:Y-m-d | YES      | Delivery date (format YYYY-MM-DD)                               |
@@ -395,8 +365,6 @@ Definition of key API objects
 | `$.amount_to_pay`            | float          | YES      | Feel in case if goods are not paid by customer                  |
 | `$.product_name.[*]`         | array:string   | NO       | Array of products names                                         |
 | `$.quantity.[*]`             | array:int(11)  | NO       | Array of products quantities                                    |
-| `$.product_receive_name.[*]` | array:string   | NO       | Array of products names to be received from customer            |
-| `$.quantity_receive.[*]`     | array:int(11)  | NO       | Array of products quantities to be received from customer       |
 | `$.service_name.[*]`         | array:string   | NO       | Array of service codes. Please check _Service code_             |
 
 ### Task Basic
@@ -416,15 +384,12 @@ Definition of key API objects
 | `$.delivery_postcode`     | string         | Delivery address 2                                              |
 | `$.delivery_city`         | string         | Delivery address 3                                              |
 | `$.additional_info`       | string         | Additional information for delivery                             |
-| `$.is_recyclable`         | tinyint(1)     | Mark in case if courier should receive some goods from customer |
 | `$.delivery_type`         | object         | Please check _Delivery type_                                    |
 | `$.status`                | string         | Current delivery status                                         |
 | `$.delivery_range`        | int(11)        | Please check _Delivery range_                                   |
 | `$.delivery_date`         | datetime:Y-m-d | Delivery date (format YYYY-MM-DD)                               |
 | `$.is_paid`               | tinyint(1)     | Mark in case if goods already paid by customer                  |
 | `$.amount_to_pay`         | float          | Feel in case if goods are not paid by customer                  |
-| `$.products_sent.[*]`     | array:object   | Please check _Product sent_                                     |
-| `$.products_received.[*]` | array:object   | Please check _Product received_                                 |
 | `$.services.[*]`          | array:object   | Please check _Service_                                          |
 
 ### Product sent
@@ -432,9 +397,3 @@ Definition of key API objects
 |------------------|---------|------------------|
 | `$.product_name` | string  | Product name     |
 | `$.quantity`     | int(11) | Product quantity |
-
-### Product received
-| Property          | Type    | Description      |
-|-------------------|---------|------------------|
-| `$.product_name`  | string  | Product name     |
-| `$.quantity`      | int(11) | Product quantity |

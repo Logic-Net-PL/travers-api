@@ -247,7 +247,7 @@
 						},
 						{
 							"key": "Date",
-							"value": "Tue, 14 Feb 2023 14:14:26 GMT"
+							"value": "Tue, 07 Mar 2023 20:22:56 GMT"
 						},
 						{
 							"key": "Access-Control-Allow-Origin",
@@ -263,15 +263,15 @@
 						},
 						{
 							"key": "Set-Cookie",
-							"value": "XSRF-TOKEN=eyJpdiI6IjF4WWhPNGFvRCtHbG1lRFUzbmtMM3c9PSIsInZhbHVlIjoiVU9QSzlLbUpSTmtHXC9IV0M2K05ENmJpdE1tVmtoN1I0dkREbGRURGlqek1hUHhBTDJJNWJaMnd4Wmd4MkZJTWIiLCJtYWMiOiI3ZTk4ODAyMGQ3ODhhYzhlYzY4NTM0ZGYyN2I0YTBhNTNjZDliYzYzZjhhZDM3ZDg0YjAyY2NmMjVjNWM0N2RjIn0%3D; expires=Tue, 14-Feb-2023 16:14:26 GMT; Max-Age=7200; path=/"
+							"value": "XSRF-TOKEN=eyJpdiI6Imk3M1dQMm12QzVMYlwvS2JtRjYrUVBRPT0iLCJ2YWx1ZSI6IkRrUjhKZ3hHTDFOQzRIb2ZmNjBTRVFGc1BEYjZRa1krWGJDcCtETUhGVmNaVXlxRzI2bG1kUHZJTE5uSlEwQVAiLCJtYWMiOiIyOThiNGQ5NTlhYWFmZThhNjhhNzc5MjY0NTM2MTI3ZWNlYmFjOTUyYTU5YWM4Y2RkYjQ4NzNiZGRlN2EzNDI1In0%3D; expires=Tue, 07-Mar-2023 22:22:56 GMT; Max-Age=7200; path=/"
 						},
 						{
 							"key": "Set-Cookie",
-							"value": "laravel_session=WXwi1DKB0v5PfumlaIgZS4ZOZlqB7EP1Qunu3tTa; expires=Tue, 14-Feb-2023 16:14:26 GMT; Max-Age=7200; path=/; httponly"
+							"value": "laravel_session=p4zd3vGsd8gLbGcTqqV6lTETjpIDyJ7o98HskbKR; expires=Tue, 07-Mar-2023 22:22:56 GMT; Max-Age=7200; path=/; httponly"
 						}
 					],
 					"cookie": [],
-					"body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"name\": \"MEDIA MARKT KATOWICE I 3 STAWY\",\n            \"street\": \"ALPEJSKA 6\",\n            \"city\": \"Katowice\",\n            \"postcode\": \"40-506\",\n            \"sap_code\": \"O2243\"\n        },\n        {\n            \"name\": \"MEDIA MARKT  KIELCE\",\n            \"street\": \"RADOMSKA 8\",\n            \"city\": \"Kielce\",\n            \"postcode\": \"25-451\",\n            \"sap_code\": \"O1198\"\n        }\n    ]\n}"
+					"body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"name\": \"MEDIA MARKT KATOWICE I 3 STAWY\",\n            \"street\": \"ALPEJSKA 6\",\n            \"city\": \"Katowice\",\n            \"postcode\": \"40-506\",\n            \"code\": \"P123\"\n        },\n        {\n            \"name\": \"MEDIA MARKT  KIELCE\",\n            \"street\": \"RADOMSKA 8\",\n            \"city\": \"Kielce\",\n            \"postcode\": \"25-451\",\n            \"code\": \"P1122\"\n        }\n    ]\n}"
 				},
 				{
 					"name": "Get Available Markets - Failure",
@@ -913,13 +913,13 @@
 			},
 			"response": [
 				{
-					"name": "Create Task - Dostawa Standard",
+					"name": "Create Task - Dostawa Standard Success",
 					"originalRequest": {
 						"method": "PUT",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"delivery_number\": \"DN001\",\n    \"customer_name\": \"Joe Doe\",\n    \"customer_phone\": \"+48 111 222 333\",\n    \"delivery_address\": \"Delivery Street 1/2\",\n    \"delivery_postcode\": \"AB 001\",\n    \"delivery_city\": \"Customer City\",\n    \"is_recyclable\": 0,\n    \"delivery_type\": 1,\n    \"delivery_date\": \"2023-01-30\",\n    \"is_paid\": 1,\n    \"product_name\": [\n        \"Product Name 1\",\n        \"Product Name 2\"\n    ],\n    \"quantity\": [\n        1,\n        2\n    ]\n}",
+							"raw": "{\n    \"market_code\": \"P123\",\n    \"delivery_number\": \"DN001-LN1\",\n    \"customer_name\": \"Joe Doe\",\n    \"customer_phone\": \"+48 111 222 333\",\n    \"delivery_address\": \"Delivery Street 1/2\",\n    \"delivery_postcode\": \"02-001\",\n    \"delivery_city\": \"Customer City\",\n    \"additional_info\": \"Please contact customer before delivery.\",\n    \"delivery_type\": 1,\n    \"delivery_range\": 1,\n    \"delivery_date\": \"2023-03-07\",\n    \"is_paid\": 1,\n    \"amount_to_pay\": 0,\n    \"product_name\": [\n        \"Product Name 1\",\n        \"Product Name 2\"\n    ],\n    \"quantity\": [\n        1,\n        2\n    ],\n    \"service_name\": [\n        \"KTCH_BSC\"   \n    ]\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -966,7 +966,7 @@
 						},
 						{
 							"key": "Date",
-							"value": "Tue, 24 Jan 2023 10:22:49 GMT"
+							"value": "Tue, 07 Mar 2023 20:24:44 GMT"
 						},
 						{
 							"key": "Access-Control-Allow-Origin",
@@ -982,91 +982,11 @@
 						},
 						{
 							"key": "Set-Cookie",
-							"value": "XSRF-TOKEN=eyJpdiI6IjNIWkRSazk5YTNmdHhSc1ZGRlBFTEE9PSIsInZhbHVlIjoiQUJlM1FnQkhTeWpjS1BuZVNwUGh2Y0FLMFpzeUN5eTdlaUI3endXMnBHQUxkdHNxTjNoZWZrcUxWOWs5UE1RWiIsIm1hYyI6ImYxNTE0Y2UzOGVmZjM4ZjQ0NmIwODVjYmY2ZThkZjM5ODEyMDI2ZTQzYjEzZjdmOTMwZTM3YTgwMGRmMThlN2EifQ%3D%3D; expires=Tue, 24-Jan-2023 12:22:49 GMT; Max-Age=7200; path=/"
+							"value": "XSRF-TOKEN=eyJpdiI6IlFnbldoU2FSTUxZMGpPcHNcL1Z4aWZBPT0iLCJ2YWx1ZSI6IkpWSStRWTJYTHhWcDRIa1hrODI4QjBvenF2U0wwRWEzVzhmWlk3RCtDTWc4QVgrMnFibkpyRUxmWk5JdThmVW0iLCJtYWMiOiIyZjdlNDlmOWI0ODc2YWU5YmVmZTMzOTQ2YWNjYTdhODQzNmY2ODI1MjdiNGZlMGJlMzg2MTU5MzE3MmMxYTQzIn0%3D; expires=Tue, 07-Mar-2023 22:24:44 GMT; Max-Age=7200; path=/"
 						},
 						{
 							"key": "Set-Cookie",
-							"value": "laravel_session=JLINouIo08MtI95qFntWlUd0dHcpsLUJSLhM2lfa; expires=Tue, 24-Jan-2023 12:22:49 GMT; Max-Age=7200; path=/; httponly"
-						}
-					],
-					"cookie": [],
-					"body": "{\n    \"success\": true\n}"
-				},
-				{
-					"name": "Create Task - Dostawa Standard z odbiorem produktów",
-					"originalRequest": {
-						"method": "PUT",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"delivery_number\": \"DN001\",\n    \"customer_name\": \"Joe Doe\",\n    \"customer_phone\": \"+48 111 222 333\",\n    \"delivery_address\": \"Delivery Street 1/2\",\n    \"delivery_postcode\": \"AB 001\",\n    \"delivery_city\": \"Customer City\",\n    \"is_recyclable\": 0,\n    \"delivery_type\": 1,\n    \"delivery_date\": \"2023-01-30\",\n    \"is_paid\": 1,\n    \"product_name\": [\n        \"Product Name 1\",\n        \"Product Name 2\"\n    ],\n    \"quantity\": [\n        1,\n        2\n    ],\n    \"product_receive_name\": [\n        \"Product Receive Name 1\",\n        \"Product Receive Name 2\"\n    ],\n    \"quantity_receive\": [\n        1,\n        2\n    ]\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{url}}/task",
-							"host": [
-								"{{url}}"
-							],
-							"path": [
-								"task"
-							]
-						}
-					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "json",
-					"header": [
-						{
-							"key": "Server",
-							"value": "nginx/1.10.3"
-						},
-						{
-							"key": "Content-Type",
-							"value": "application/json"
-						},
-						{
-							"key": "Transfer-Encoding",
-							"value": "chunked"
-						},
-						{
-							"key": "Connection",
-							"value": "keep-alive"
-						},
-						{
-							"key": "X-Powered-By",
-							"value": "PHP/7.2.34"
-						},
-						{
-							"key": "Cache-Control",
-							"value": "no-cache, private"
-						},
-						{
-							"key": "Date",
-							"value": "Tue, 24 Jan 2023 16:42:08 GMT"
-						},
-						{
-							"key": "Access-Control-Allow-Origin",
-							"value": "*"
-						},
-						{
-							"key": "Access-Control-Allow-Methods",
-							"value": "GET, POST, PUT, DELETE, OPTIONS"
-						},
-						{
-							"key": "Access-Control-Allow-Headers",
-							"value": "Content-Type, Origin, Authorization, Access-Control-Allow-Headers, Cache-Control, X-Requested-With"
-						},
-						{
-							"key": "Set-Cookie",
-							"value": "XSRF-TOKEN=eyJpdiI6InZLMVE1WldPNzdZMm9LakJJTmpZWmc9PSIsInZhbHVlIjoieVZsaHFJZm50M3FLSExyYUFST3ZcL1B6VDZPRjNWc013VmRHXC82VFFHeXF2N2REQnRmUVZQQUMrZUhLaitGVWM3IiwibWFjIjoiNjBmYjdmODhkNDgzYTcwNDBkYzlhM2ZkY2VlNmYyOWNjM2JjMjcwNDEyNDQyMTY4NTdjYWQ2MWQzNjJmMzMzOSJ9; expires=Tue, 24-Jan-2023 18:42:08 GMT; Max-Age=7200; path=/"
-						},
-						{
-							"key": "Set-Cookie",
-							"value": "laravel_session=HzHoqDXDxZTACX4XBnBAGZvtPNJJd0FouU8fSbnW; expires=Tue, 24-Jan-2023 18:42:08 GMT; Max-Age=7200; path=/; httponly"
+							"value": "laravel_session=p4zd3vGsd8gLbGcTqqV6lTETjpIDyJ7o98HskbKR; expires=Tue, 07-Mar-2023 22:24:44 GMT; Max-Age=7200; path=/; httponly"
 						}
 					],
 					"cookie": [],
@@ -1153,93 +1073,13 @@
 					"body": "{\n    \"success\": true\n}"
 				},
 				{
-					"name": "Create Task - Dostawa Express z odbiorem produktów",
-					"originalRequest": {
-						"method": "PUT",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"delivery_number\": \"DN001\",\n    \"customer_name\": \"Joe Doe\",\n    \"customer_phone\": \"+48 111 222 333\",\n    \"delivery_address\": \"Delivery Street 1/2\",\n    \"delivery_postcode\": \"AB 001\",\n    \"delivery_city\": \"Customer City\",\n    \"is_recyclable\": 0,\n    \"delivery_type\": 2,\n    \"delivery_date\": \"2023-01-30\",\n    \"is_paid\": 1,\n    \"product_name\": [\n        \"Product Name 1\",\n        \"Product Name 2\"\n    ],\n    \"quantity\": [\n        1,\n        2\n    ],\n    \"product_receive_name\": [\n        \"Product Receive Name 1\",\n        \"Product Receive Name 2\"\n    ],\n    \"quantity_receive\": [\n        1,\n        2\n    ]\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{url}}/task",
-							"host": [
-								"{{url}}"
-							],
-							"path": [
-								"task"
-							]
-						}
-					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "json",
-					"header": [
-						{
-							"key": "Server",
-							"value": "nginx/1.10.3"
-						},
-						{
-							"key": "Content-Type",
-							"value": "application/json"
-						},
-						{
-							"key": "Transfer-Encoding",
-							"value": "chunked"
-						},
-						{
-							"key": "Connection",
-							"value": "keep-alive"
-						},
-						{
-							"key": "X-Powered-By",
-							"value": "PHP/7.2.34"
-						},
-						{
-							"key": "Cache-Control",
-							"value": "no-cache, private"
-						},
-						{
-							"key": "Date",
-							"value": "Tue, 24 Jan 2023 16:42:49 GMT"
-						},
-						{
-							"key": "Access-Control-Allow-Origin",
-							"value": "*"
-						},
-						{
-							"key": "Access-Control-Allow-Methods",
-							"value": "GET, POST, PUT, DELETE, OPTIONS"
-						},
-						{
-							"key": "Access-Control-Allow-Headers",
-							"value": "Content-Type, Origin, Authorization, Access-Control-Allow-Headers, Cache-Control, X-Requested-With"
-						},
-						{
-							"key": "Set-Cookie",
-							"value": "XSRF-TOKEN=eyJpdiI6IjhPR2o3bFB4b1orMHdqNEVYTnY4Q0E9PSIsInZhbHVlIjoicFR1cm9QcVFFQlN1Q29GWUFUeVF4UlZtdkZrcFBheEZJQ1hYcXhmY1wvT2V1TGNZdkprXC9VS2NRSUJZSEptVlB2IiwibWFjIjoiMmRlYjFkOThmODY2MjE1MzlhYzMzZWNiOGNhN2YzNDYyOWUzYzkzZDUyMTg5NWRhM2E1YjlkZWY1NTdjMzkzNSJ9; expires=Tue, 24-Jan-2023 18:42:49 GMT; Max-Age=7200; path=/"
-						},
-						{
-							"key": "Set-Cookie",
-							"value": "laravel_session=HzHoqDXDxZTACX4XBnBAGZvtPNJJd0FouU8fSbnW; expires=Tue, 24-Jan-2023 18:42:49 GMT; Max-Age=7200; path=/; httponly"
-						}
-					],
-					"cookie": [],
-					"body": "{\n    \"success\": true\n}"
-				},
-				{
 					"name": "Create Task - Dostawa Super Express",
 					"originalRequest": {
 						"method": "PUT",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"delivery_number\": \"DN001\",\n    \"customer_name\": \"Joe Doe\",\n    \"customer_phone\": \"+48 111 222 333\",\n    \"delivery_address\": \"Delivery Street 1/2\",\n    \"delivery_postcode\": \"AB 001\",\n    \"delivery_city\": \"Customer City\",\n    \"is_recyclable\": 0,\n    \"delivery_type\": 3,\n    \"delivery_date\": \"2023-01-30\",\n    \"is_paid\": 1,\n    \"product_name\": [\n        \"Product Name 1\",\n        \"Product Name 2\"\n    ],\n    \"quantity\": [\n        1,\n        2\n    ]\n}",
+							"raw": "{\n    \"market_code\": \"P123\",\n    \"delivery_number\": \"DN001-LN3\",\n    \"customer_name\": \"Joe Doe\",\n    \"customer_phone\": \"+48 111 222 333\",\n    \"delivery_address\": \"Delivery Street 1/2\",\n    \"delivery_postcode\": \"02-001\",\n    \"delivery_city\": \"Customer City\",\n    \"additional_info\": \"Please contact customer before delivery.\",\n    \"delivery_type\": 3,\n    \"delivery_range\": 1,\n    \"delivery_date\": \"2023-03-07\",\n    \"is_paid\": 1,\n    \"amount_to_pay\": 0,\n    \"product_name\": [\n        \"Product Name 1\",\n        \"Product Name 2\"\n    ],\n    \"quantity\": [\n        1,\n        2\n    ],\n    \"service_name\": [\n        \"KTCH_BSC\"   \n    ]\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1286,7 +1126,7 @@
 						},
 						{
 							"key": "Date",
-							"value": "Tue, 24 Jan 2023 10:25:16 GMT"
+							"value": "Tue, 07 Mar 2023 20:26:59 GMT"
 						},
 						{
 							"key": "Access-Control-Allow-Origin",
@@ -1302,171 +1142,11 @@
 						},
 						{
 							"key": "Set-Cookie",
-							"value": "XSRF-TOKEN=eyJpdiI6InBOYXhvK3lXaVdoV1QrbVBJZ1Zlcnc9PSIsInZhbHVlIjoidFFFYVR5WmNjS0Ixd3hFRG5zakZISVBDMWVsNTNQVFhwWlllWmZjVWZ5NVFQRncraklcL2pLcHgzN01FR2xVaFMiLCJtYWMiOiJmYTQ4NWFkMmNiZjNmYWY2YmZkYWY0NWY4YjE5YWVhMTMzZjJmZjViOTNhN2FlMjkyYjc4Njk3MTYyYTBiM2YyIn0%3D; expires=Tue, 24-Jan-2023 12:25:16 GMT; Max-Age=7200; path=/"
+							"value": "XSRF-TOKEN=eyJpdiI6ImFDRDJqMjFCbWFjZjM4QlZuaDVmb2c9PSIsInZhbHVlIjoiMHo2XC9uczhRSTJZcGJvaFdIbjF6THhVY2tNeEhkRnhEOVJEN2lrdm9YTVQ4RW5tWHpyK3BHZUVoYUZycG04bG0iLCJtYWMiOiJmZGEzNTYwYTc3M2IxMTAxNWEyNzc1YjdkYTRlYjE2MWVhMjNjNGMwMGRmODU3YzA5YWY3ZjIzYzk5OWU4M2UyIn0%3D; expires=Tue, 07-Mar-2023 22:26:59 GMT; Max-Age=7200; path=/"
 						},
 						{
 							"key": "Set-Cookie",
-							"value": "laravel_session=JLINouIo08MtI95qFntWlUd0dHcpsLUJSLhM2lfa; expires=Tue, 24-Jan-2023 12:25:16 GMT; Max-Age=7200; path=/; httponly"
-						}
-					],
-					"cookie": [],
-					"body": "{\n    \"success\": true\n}"
-				},
-				{
-					"name": "Create Task - Dotawa Super Express z Odbiorem Produktów",
-					"originalRequest": {
-						"method": "PUT",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"delivery_number\": \"DN001\",\n    \"customer_name\": \"Joe Doe\",\n    \"customer_phone\": \"+48 111 222 333\",\n    \"delivery_address\": \"Delivery Street 1/2\",\n    \"delivery_postcode\": \"AB 001\",\n    \"delivery_city\": \"Customer City\",\n    \"is_recyclable\": 0,\n    \"delivery_type\": 3,\n    \"delivery_date\": \"2023-01-30\",\n    \"is_paid\": 1,\n    \"product_name\": [\n        \"Product Name 1\",\n        \"Product Name 2\"\n    ],\n    \"quantity\": [\n        1,\n        2\n    ],\n    \"product_receive_name\": [\n        \"Product Receive Name 1\",\n        \"Product Receive Name 2\"\n    ],\n    \"quantity_receive\": [\n        1,\n        2\n    ]\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{url}}/task",
-							"host": [
-								"{{url}}"
-							],
-							"path": [
-								"task"
-							]
-						}
-					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "json",
-					"header": [
-						{
-							"key": "Server",
-							"value": "nginx/1.10.3"
-						},
-						{
-							"key": "Content-Type",
-							"value": "application/json"
-						},
-						{
-							"key": "Transfer-Encoding",
-							"value": "chunked"
-						},
-						{
-							"key": "Connection",
-							"value": "keep-alive"
-						},
-						{
-							"key": "X-Powered-By",
-							"value": "PHP/7.2.34"
-						},
-						{
-							"key": "Cache-Control",
-							"value": "no-cache, private"
-						},
-						{
-							"key": "Date",
-							"value": "Tue, 24 Jan 2023 16:43:36 GMT"
-						},
-						{
-							"key": "Access-Control-Allow-Origin",
-							"value": "*"
-						},
-						{
-							"key": "Access-Control-Allow-Methods",
-							"value": "GET, POST, PUT, DELETE, OPTIONS"
-						},
-						{
-							"key": "Access-Control-Allow-Headers",
-							"value": "Content-Type, Origin, Authorization, Access-Control-Allow-Headers, Cache-Control, X-Requested-With"
-						},
-						{
-							"key": "Set-Cookie",
-							"value": "XSRF-TOKEN=eyJpdiI6Ijhqb2VuNlh6eTBjYTJoS0kwK2s3bUE9PSIsInZhbHVlIjoiakZxczl1cHBiSW9LVHVHZmJMTVE3dlZrblNjZ2pWb0hUUEJBd0NwbFRuQUdLUmI2RVpcL0NzZzBUV3FZTm1PdnMiLCJtYWMiOiI5YzQ2YTE1YmE5NjQzYjdjNWNiZTE5MDI4NWY0OTNiNDgxOTFmZTQ3NGIwODM0MmVkM2I5NDU1YjQ2NzJkYWVjIn0%3D; expires=Tue, 24-Jan-2023 18:43:36 GMT; Max-Age=7200; path=/"
-						},
-						{
-							"key": "Set-Cookie",
-							"value": "laravel_session=HzHoqDXDxZTACX4XBnBAGZvtPNJJd0FouU8fSbnW; expires=Tue, 24-Jan-2023 18:43:36 GMT; Max-Age=7200; path=/; httponly"
-						}
-					],
-					"cookie": [],
-					"body": "{\n    \"success\": true\n}"
-				},
-				{
-					"name": "Create Task - Reklamacja",
-					"originalRequest": {
-						"method": "PUT",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"customer_name\": \"Joe Doe\",\n    \"customer_phone\": \"+48 111 222 333\",\n    \"delivery_address\": \"Delivery Street 1/2\",\n    \"delivery_postcode\": \"AB 001\",\n    \"delivery_city\": \"Customer City\",\n    \"is_recyclable\": 0,\n    \"delivery_type\": 4,\n    \"delivery_date\": \"2023-01-30\",\n    \"is_paid\": 1\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{url}}/task",
-							"host": [
-								"{{url}}"
-							],
-							"path": [
-								"task"
-							]
-						}
-					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "json",
-					"header": [
-						{
-							"key": "Server",
-							"value": "nginx/1.10.3"
-						},
-						{
-							"key": "Content-Type",
-							"value": "application/json"
-						},
-						{
-							"key": "Transfer-Encoding",
-							"value": "chunked"
-						},
-						{
-							"key": "Connection",
-							"value": "keep-alive"
-						},
-						{
-							"key": "X-Powered-By",
-							"value": "PHP/7.2.34"
-						},
-						{
-							"key": "Cache-Control",
-							"value": "no-cache, private"
-						},
-						{
-							"key": "Date",
-							"value": "Tue, 24 Jan 2023 10:27:42 GMT"
-						},
-						{
-							"key": "Access-Control-Allow-Origin",
-							"value": "*"
-						},
-						{
-							"key": "Access-Control-Allow-Methods",
-							"value": "GET, POST, PUT, DELETE, OPTIONS"
-						},
-						{
-							"key": "Access-Control-Allow-Headers",
-							"value": "Content-Type, Origin, Authorization, Access-Control-Allow-Headers, Cache-Control, X-Requested-With"
-						},
-						{
-							"key": "Set-Cookie",
-							"value": "XSRF-TOKEN=eyJpdiI6ImVPMURpSTNCN2xuMENhXC9WTDBROEFBPT0iLCJ2YWx1ZSI6IkNscnNlbkRJNklyTzNFa2k1bm9EVTBnVUJQSEd2TFo3TFhpQnFBaDcwaDNuUUEwaUk4M3M0YytzR2hxS3ZaV2wiLCJtYWMiOiJiYzQwYWM0ZjI1ZTgzMzhjMGRhMjQ3NTE5NGRkNTQyMGM1NmRkNDExN2E2YzdkNWE4MDY3NmY2ODdkMTAyODlmIn0%3D; expires=Tue, 24-Jan-2023 12:27:42 GMT; Max-Age=7200; path=/"
-						},
-						{
-							"key": "Set-Cookie",
-							"value": "laravel_session=JLINouIo08MtI95qFntWlUd0dHcpsLUJSLhM2lfa; expires=Tue, 24-Jan-2023 12:27:42 GMT; Max-Age=7200; path=/; httponly"
+							"value": "laravel_session=p4zd3vGsd8gLbGcTqqV6lTETjpIDyJ7o98HskbKR; expires=Tue, 07-Mar-2023 22:26:59 GMT; Max-Age=7200; path=/; httponly"
 						}
 					],
 					"cookie": [],
@@ -1510,13 +1190,93 @@
 			},
 			"response": [
 				{
+					"name": "Update Task - Success",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"market_code\": \"P123\",\n    \"delivery_number\": \"DN001-LN2\",\n    \"customer_name\": \"Joe Doe\",\n    \"customer_phone\": \"+48 111 222 333\",\n    \"delivery_address\": \"Delivery Street 1/2\",\n    \"delivery_postcode\": \"02-001\",\n    \"delivery_city\": \"Customer City\",\n    \"additional_info\": \"Please contact customer before delivery.\",\n    \"delivery_type\": 2,\n    \"delivery_range\": 1,\n    \"delivery_date\": \"2023-03-08\",\n    \"is_paid\": 1,\n    \"amount_to_pay\": 0,\n    \"product_name\": [\n        \"Product Name 1\"\n    ],\n    \"quantity\": [\n        1\n    ],\n    \"service_name\": [\n        \"KTCH_BSC\"   \n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/task",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"task"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.10.3"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.2.34"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 07 Mar 2023 20:28:02 GMT"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, DELETE, OPTIONS"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Origin, Authorization, Access-Control-Allow-Headers, Cache-Control, X-Requested-With"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "XSRF-TOKEN=eyJpdiI6IjNDZXFCbW9aVzJXNXdmMkZoMitweVE9PSIsInZhbHVlIjoiSVc5dGpzaTdXdysrUVowN0dvYmR4SUY0OTQ2ZmYwRVkwWkRaN05zaDBzN2RwR3ljb1JaN2JIeUNzdStDVTVGUyIsIm1hYyI6ImY2Njg5NzUzMzZmODVjOWUzNjdmZGVkYzM0OTVhMmUyNGFjMzAzNWVlNzI0OGE1ZWMyNDkxYThkY2UyMTNiNTcifQ%3D%3D; expires=Tue, 07-Mar-2023 22:28:02 GMT; Max-Age=7200; path=/"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "laravel_session=p4zd3vGsd8gLbGcTqqV6lTETjpIDyJ7o98HskbKR; expires=Tue, 07-Mar-2023 22:28:02 GMT; Max-Age=7200; path=/; httponly"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true\n}"
+				},
+				{
 					"name": "Update Task - Failure",
 					"originalRequest": {
 						"method": "PATCH",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"market_code\": \"O2243\",\n    \"delivery_number\": \"DN002\",\n    \"customer_name\": \"Joe Doe\",\n    \"customer_phone\": \"+48 111 222 333\",\n    \"delivery_address\": \"Delivery Street 1/2\",\n    \"delivery_postcode\": \"02-001\",\n    \"delivery_city\": \"Customer City\",\n    \"additional_info\": \"Please contact customer before delivery.\",\n    \"is_recyclable\": 0,\n    \"delivery_type\": 3,\n    \"delivery_range\": 1,\n    \"delivery_date\": \"2023-02-19\",\n    \"is_paid\": 1,\n    \"amount_to_pay\": 0,\n    \"product_name\": [\n        \"Product Name 1\",\n        \"Product Name 2\"\n    ],\n    \"quantity\": [\n        1,\n        2\n    ],\n    \"product_receive_name\": [\n        \"Product Receive Name 1\",\n        \"Product Receive Name 2\"\n    ],\n    \"quantity_receive\": [\n        1,\n        2\n    ],\n    \"service_name\": [\n        \"KTCH_BSC\"   \n    ]\n}",
+							"raw": "{\n    \"market_code\": \"O2243\",\n    \"delivery_number\": \"DN-002-01\",\n    \"customer_name\": \"Joe Doe\",\n    \"customer_phone\": \"+48 111 222 333\",\n    \"delivery_address\": \"Delivery Street 1/2\",\n    \"delivery_postcode\": \"02-001\",\n    \"delivery_city\": \"Customer City\",\n    \"additional_info\": \"Please contact customer before delivery.\",\n    \"delivery_type\": 3,\n    \"delivery_range\": 1,\n    \"delivery_date\": \"2023-02-19\",\n    \"is_paid\": 1,\n    \"amount_to_pay\": 0,\n    \"product_name\": [\n        \"Product Name 1\",\n        \"Product Name 2\"\n    ],\n    \"quantity\": [\n        1,\n        2\n    ],\n    \"service_name\": [\n        \"KTCH_BSC\"   \n    ]\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1563,7 +1323,7 @@
 						},
 						{
 							"key": "Date",
-							"value": "Fri, 24 Feb 2023 11:00:39 GMT"
+							"value": "Tue, 07 Mar 2023 20:28:54 GMT"
 						},
 						{
 							"key": "Access-Control-Allow-Origin",
@@ -1579,95 +1339,15 @@
 						},
 						{
 							"key": "Set-Cookie",
-							"value": "XSRF-TOKEN=eyJpdiI6Ilp1Q3RZbjdjZlE4QlV2aU5vV0Y5K0E9PSIsInZhbHVlIjoibTZYTmh3czBKbzVCdFNmTitRNWZ4a1ZQYU5iakNkY2d1MW81d09yRVwvTmNZZkZuYWVldGc3a3daZ1NVQ1pVTXMiLCJtYWMiOiIyNmEzMWMxMDZkNDBmOTIyZjlkMjM0ZTc5NjhiNWMxMjlhNGFmMGFlMzFlNDgzOGJiMDkxNWM5ZjUxMTYxZmRlIn0%3D; expires=Fri, 24-Feb-2023 13:00:39 GMT; Max-Age=7200; path=/"
+							"value": "XSRF-TOKEN=eyJpdiI6IlU3M3NrY1RSbklCMFFXZXRRS005S1E9PSIsInZhbHVlIjoiRzU3K3BsZEQ0d0lnN2xwNldKWkVcL2hvQ3czOGNZekVTYnhwcHNRK3VRS2JBZjl4bVA5bzNIdzFLV0wzYSsyTEMiLCJtYWMiOiJjNjM5YTQzZWMzNTE1NjlmMzY2NjkxY2ZlYWJjZmZhY2UwYTczNjk5YTU2MzAwOTM2MDE0NzFmZDlhNTEzNmI1In0%3D; expires=Tue, 07-Mar-2023 22:28:54 GMT; Max-Age=7200; path=/"
 						},
 						{
 							"key": "Set-Cookie",
-							"value": "laravel_session=YzeNoTBYNhe7yKhwLYoWdhluOiABUJvz9SEYLI04; expires=Fri, 24-Feb-2023 13:00:39 GMT; Max-Age=7200; path=/; httponly"
+							"value": "laravel_session=p4zd3vGsd8gLbGcTqqV6lTETjpIDyJ7o98HskbKR; expires=Tue, 07-Mar-2023 22:28:54 GMT; Max-Age=7200; path=/; httponly"
 						}
 					],
 					"cookie": [],
-					"body": "{\n    \"success\": false,\n    \"errors\": [\n        \"delivery_date value is invalid. As soon possible date is today\",\n        \"delivery_number value is invalid\"\n    ]\n}"
-				},
-				{
-					"name": "Update Task - Success",
-					"originalRequest": {
-						"method": "PATCH",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"market_code\": \"O2243\",\n    \"delivery_number\": \"DN002\",\n    \"customer_name\": \"Joe Doe\",\n    \"customer_phone\": \"+48 111 222 333\",\n    \"delivery_address\": \"Delivery Street 1/2\",\n    \"delivery_postcode\": \"02-001\",\n    \"delivery_city\": \"Customer City\",\n    \"additional_info\": \"Please contact customer before delivery.\",\n    \"is_recyclable\": 0,\n    \"delivery_type\": 3,\n    \"delivery_range\": 1,\n    \"delivery_date\": \"2023-02-24\",\n    \"is_paid\": 1,\n    \"amount_to_pay\": 0,\n    \"product_name\": [\n        \"Product Name 3\"\n    ],\n    \"quantity\": [\n        1\n    ],\n    \"product_receive_name\": [\n        \"Product Receive Name 1\"\n    ],\n    \"quantity_receive\": [\n        1\n    ]\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{url}}/task",
-							"host": [
-								"{{url}}"
-							],
-							"path": [
-								"task"
-							]
-						}
-					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "json",
-					"header": [
-						{
-							"key": "Server",
-							"value": "nginx/1.10.3"
-						},
-						{
-							"key": "Content-Type",
-							"value": "application/json"
-						},
-						{
-							"key": "Transfer-Encoding",
-							"value": "chunked"
-						},
-						{
-							"key": "Connection",
-							"value": "keep-alive"
-						},
-						{
-							"key": "X-Powered-By",
-							"value": "PHP/7.2.34"
-						},
-						{
-							"key": "Cache-Control",
-							"value": "no-cache, private"
-						},
-						{
-							"key": "Date",
-							"value": "Fri, 24 Feb 2023 11:33:11 GMT"
-						},
-						{
-							"key": "Access-Control-Allow-Origin",
-							"value": "*"
-						},
-						{
-							"key": "Access-Control-Allow-Methods",
-							"value": "GET, POST, PUT, DELETE, OPTIONS"
-						},
-						{
-							"key": "Access-Control-Allow-Headers",
-							"value": "Content-Type, Origin, Authorization, Access-Control-Allow-Headers, Cache-Control, X-Requested-With"
-						},
-						{
-							"key": "Set-Cookie",
-							"value": "XSRF-TOKEN=eyJpdiI6Iko4dDVPK0xHZjJsVWpMYVdZQ0lQNXc9PSIsInZhbHVlIjoiUzNDZktZNEdmWERJOXdHYW5JNTdpZVREWGF2c2NQXC9JSWpkZTJ1bnR4VXl5ZG1pMklZUWRNSTRFRytcL1c1MlwvQSIsIm1hYyI6IjVlZDRkODdlNTRjZjA5NjgxNjBhZTRjODk2YTJkMzYzYzA1YzA5MzAzZDFlOTlmMjQ5NTQwMzU0MDY1NzhiMWQifQ%3D%3D; expires=Fri, 24-Feb-2023 13:33:11 GMT; Max-Age=7200; path=/"
-						},
-						{
-							"key": "Set-Cookie",
-							"value": "laravel_session=YzeNoTBYNhe7yKhwLYoWdhluOiABUJvz9SEYLI04; expires=Fri, 24-Feb-2023 13:33:11 GMT; Max-Age=7200; path=/; httponly"
-						}
-					],
-					"cookie": [],
-					"body": "{\n    \"success\": true\n}"
+					"body": "{\n    \"success\": false,\n    \"errors\": [\n        \"market_code value is invalid\",\n        \"delivery_date value is invalid. As soon possible date is today\",\n        \"delivery_number value is invalid\"\n    ]\n}"
 				}
 			]
 		},
@@ -2471,7 +2151,7 @@
 						},
 						{
 							"key": "Date",
-							"value": "Tue, 14 Feb 2023 14:56:38 GMT"
+							"value": "Tue, 07 Mar 2023 20:29:18 GMT"
 						},
 						{
 							"key": "Access-Control-Allow-Origin",
@@ -2487,15 +2167,15 @@
 						},
 						{
 							"key": "Set-Cookie",
-							"value": "XSRF-TOKEN=eyJpdiI6Ikt3ak5vQ0preXpCNFZxYWc5KzE1cGc9PSIsInZhbHVlIjoiMW5LbnR1Y3N1R2hxUmQ5YjQxTVpCcjY3THBJR3VcLzBqUFpaZHhXMDlTa0F1UGxBNklNQ3U2bnlOMGp0QUJjdEciLCJtYWMiOiI3NTk0Yzc3OTg4MmI4NDM3OWU3YjIxODg4M2U2MDhkMWQ3YmYzMjIxZmJkODE3OGFmNzQwZTI4ZGY1NWVjZTRhIn0%3D; expires=Tue, 14-Feb-2023 16:56:38 GMT; Max-Age=7200; path=/"
+							"value": "XSRF-TOKEN=eyJpdiI6IktKc3BFbWtpMnp6c2tLaDNTY1Vnb2c9PSIsInZhbHVlIjoiSEFCK3I0RUFBNFU2ZnVyVDlSVENBRHB3cUNQWlwvcnFTZmJKTlwvXC9vbXhaM0p6a1lhXC9MZ0ZtbFRidDA4WGt2aG0iLCJtYWMiOiI4ZDE0MDYyOTk3MjI1M2JlN2I0YWJlMzYzM2ZkOGRlNTYxOTAxM2U5MWYyNjg3MWIzYWM1NWU0OTAzYjYxZGQwIn0%3D; expires=Tue, 07-Mar-2023 22:29:18 GMT; Max-Age=7200; path=/"
 						},
 						{
 							"key": "Set-Cookie",
-							"value": "laravel_session=WXwi1DKB0v5PfumlaIgZS4ZOZlqB7EP1Qunu3tTa; expires=Tue, 14-Feb-2023 16:56:38 GMT; Max-Age=7200; path=/; httponly"
+							"value": "laravel_session=p4zd3vGsd8gLbGcTqqV6lTETjpIDyJ7o98HskbKR; expires=Tue, 07-Mar-2023 22:29:18 GMT; Max-Age=7200; path=/; httponly"
 						}
 					],
 					"cookie": [],
-					"body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"market_code\": \"O2243\",\n            \"delivery_number\": \"DN001\",\n            \"customer_name\": \"Joe Doe\",\n            \"delivery_address\": \"Delivery Street 1/2\",\n            \"delivery_postcode\": \"02-001\",\n            \"delivery_city\": \"Customer City\",\n            \"additional_info\": \"Please contact customer before delivery.\",\n            \"is_recyclable\": 0,\n            \"delivery_type\": {\n                \"id\": 3,\n                \"name\": \"Super Express\"\n            },\n            \"status\": \"Zlecenie anulowane\",\n            \"delivery_range\": 1,\n            \"delivery_date\": \"2023-02-04\",\n            \"is_paid\": 1,\n            \"amount_to_pay\": 0,\n            \"products_sent\": [\n                {\n                    \"product_name\": \"Product Name 1\",\n                    \"quantity\": 1\n                },\n                {\n                    \"product_name\": \"Product Name 2\",\n                    \"quantity\": 2\n                }\n            ],\n            \"products_received\": [\n                {\n                    \"product_name\": \"Product Receive Name 1\",\n                    \"quantity\": 1\n                },\n                {\n                    \"product_name\": \"Product Receive Name 2\",\n                    \"quantity\": 2\n                }\n            ],\n            \"services\": [\n                {\n                    \"mdi_group\": \"KTCH_BSC\",\n                    \"description\": \"INSTALACJA AGD KUCHNIE PODSTAWOWY\",\n                    \"is_done\": \"Niewykonana\"\n                }\n            ]\n        }\n    ]\n}"
+					"body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"market_code\": \"P123\",\n            \"delivery_number\": \"DN001\",\n            \"customer_name\": \"Joe Doe\",\n            \"delivery_address\": \"Delivery Street 1/2\",\n            \"delivery_postcode\": \"02-001\",\n            \"delivery_city\": \"Customer City\",\n            \"additional_info\": \"Please contact customer before delivery.\",\n            \"delivery_type\": {\n                \"id\": 3,\n                \"name\": \"Super Express\"\n            },\n            \"status\": \"Zlecenie anulowane\",\n            \"delivery_range\": 1,\n            \"delivery_date\": \"2023-02-04\",\n            \"is_paid\": 1,\n            \"amount_to_pay\": 0,\n            \"products_sent\": [\n                {\n                    \"product_name\": \"Product Name 1\",\n                    \"quantity\": 1\n                },\n                {\n                    \"product_name\": \"Product Name 2\",\n                    \"quantity\": 2\n                }\n            ],\n            \"services\": [\n                {\n                    \"mdi_group\": \"KTCH_BSC\",\n                    \"description\": \"INSTALACJA AGD KUCHNIE PODSTAWOWY\",\n                    \"is_done\": \"Niewykonana\"\n                }\n            ]\n        },\n        {\n            \"market_code\": \"P123\",\n            \"delivery_number\": \"DN001\",\n            \"customer_name\": \"Joe Doe\",\n            \"delivery_address\": \"Delivery Street 1/2\",\n            \"delivery_postcode\": \"02-001\",\n            \"delivery_city\": \"Customer City\",\n            \"additional_info\": \"Please contact customer before delivery.\",\n            \"delivery_type\": {\n                \"id\": 3,\n                \"name\": \"Super Express\"\n            },\n            \"status\": \"Zlecenie gotowe do pobrania\",\n            \"delivery_range\": 1,\n            \"delivery_date\": \"2023-02-13\",\n            \"is_paid\": 1,\n            \"amount_to_pay\": 0,\n            \"products_sent\": [\n                {\n                    \"product_name\": \"Product Name 1\",\n                    \"quantity\": 1\n                },\n                {\n                    \"product_name\": \"Product Name 2\",\n                    \"quantity\": 2\n                }\n            ],\n            \"services\": []\n        },\n        {\n            \"market_code\": \"P123\",\n            \"delivery_number\": \"DN001\",\n            \"customer_name\": \"Joe Doe\",\n            \"delivery_address\": \"Delivery Street 1/2\",\n            \"delivery_postcode\": \"02-001\",\n            \"delivery_city\": \"Customer City\",\n            \"additional_info\": \"Please contact customer before delivery.\",\n            \"delivery_type\": {\n                \"id\": 3,\n                \"name\": \"Super Express\"\n            },\n            \"status\": \"Zlecenie gotowe do pobrania\",\n            \"delivery_range\": 1,\n            \"delivery_date\": \"2023-02-13\",\n            \"is_paid\": 1,\n            \"amount_to_pay\": 0,\n            \"products_sent\": [\n                {\n                    \"product_name\": \"Product Name 1\",\n                    \"quantity\": 1\n                },\n                {\n                    \"product_name\": \"Product Name 2\",\n                    \"quantity\": 2\n                }\n            ],\n            \"services\": [\n                {\n                    \"mdi_group\": \"KTCH_BSC\",\n                    \"description\": \"INSTALACJA AGD KUCHNIE PODSTAWOWY\",\n                    \"is_done\": \"Niewykonana\"\n                }\n            ]\n        },\n        {\n            \"market_code\": \"P123\",\n            \"delivery_number\": \"DN001\",\n            \"customer_name\": \"Joe Doe\",\n            \"delivery_address\": \"Delivery Street 1/2\",\n            \"delivery_postcode\": \"02-001\",\n            \"delivery_city\": \"Customer City\",\n            \"additional_info\": \"Please contact customer before delivery.\",\n            \"delivery_type\": {\n                \"id\": 3,\n                \"name\": \"Super Express\"\n            },\n            \"status\": \"Zlecenie gotowe do pobrania\",\n            \"delivery_range\": 1,\n            \"delivery_date\": \"2023-02-19\",\n            \"is_paid\": 1,\n            \"amount_to_pay\": 0,\n            \"products_sent\": [\n                {\n                    \"product_name\": \"Product Name 1\",\n                    \"quantity\": 1\n                },\n                {\n                    \"product_name\": \"Product Name 2\",\n                    \"quantity\": 2\n                }\n            ],\n            \"services\": [\n                {\n                    \"mdi_group\": \"KTCH_BSC\",\n                    \"description\": \"INSTALACJA AGD KUCHNIE PODSTAWOWY\",\n                    \"is_done\": \"Niewykonana\"\n                }\n            ]\n        }\n    ]\n}"
 				},
 				{
 					"name": "Get Detailed Tasks List - Success by date",
@@ -2551,7 +2231,7 @@
 						},
 						{
 							"key": "Date",
-							"value": "Tue, 14 Feb 2023 15:08:55 GMT"
+							"value": "Tue, 07 Mar 2023 20:29:39 GMT"
 						},
 						{
 							"key": "Access-Control-Allow-Origin",
@@ -2567,15 +2247,15 @@
 						},
 						{
 							"key": "Set-Cookie",
-							"value": "XSRF-TOKEN=eyJpdiI6ImtXMWJRNHNmcHhvZkVEQkZIbGdDeHc9PSIsInZhbHVlIjoiR0gyWWRXWFpRcFNNK1ZZWmNoVzg4NU5BVUxPUzVRak5xeE1SQlhYSmNWNDBXSXFsK1hGUGFwV1Q1QmZ0K2RkNyIsIm1hYyI6ImNlMGQ5NDQyZDA5NDNiMjY5OWVhMTE1MzIzMjk2ZTBhODgyOGZhNjhjZDRmZTE5ODE4NjgwNDY4MDUzNzUwNzgifQ%3D%3D; expires=Tue, 14-Feb-2023 17:08:55 GMT; Max-Age=7200; path=/"
+							"value": "XSRF-TOKEN=eyJpdiI6Im9OdGxNMjFYU283XC9Ca09ubk5ZbUVnPT0iLCJ2YWx1ZSI6Ijh2UVhKMEZJKzRURmZQUGxxdUJGeE9wWURKWVFkUFF3S3ZWZEFpVjVTVWNqbk9jcXdvXC9uWUJrYXE2c1dlY2NLIiwibWFjIjoiY2FlYjJiNGVmMGYzODEzNGQ0MzA2Nzk2MzYzNGJiNjgyYTU0MzdlY2QzZjVhZmZlOTczNzE5NmI0YjVmYzU2OCJ9; expires=Tue, 07-Mar-2023 22:29:39 GMT; Max-Age=7200; path=/"
 						},
 						{
 							"key": "Set-Cookie",
-							"value": "laravel_session=WXwi1DKB0v5PfumlaIgZS4ZOZlqB7EP1Qunu3tTa; expires=Tue, 14-Feb-2023 17:08:55 GMT; Max-Age=7200; path=/; httponly"
+							"value": "laravel_session=p4zd3vGsd8gLbGcTqqV6lTETjpIDyJ7o98HskbKR; expires=Tue, 07-Mar-2023 22:29:39 GMT; Max-Age=7200; path=/; httponly"
 						}
 					],
 					"cookie": [],
-					"body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"market_code\": \"O2243\",\n            \"delivery_number\": \"DN001\",\n            \"customer_name\": \"Joe Doe\",\n            \"delivery_address\": \"Delivery Street 1/2\",\n            \"delivery_postcode\": \"02-001\",\n            \"delivery_city\": \"Customer City\",\n            \"additional_info\": \"Please contact customer before delivery.\",\n            \"is_recyclable\": 0,\n            \"delivery_type\": {\n                \"id\": 3,\n                \"name\": \"Super Express\"\n            },\n            \"status\": \"Zlecenie anulowane\",\n            \"delivery_range\": 1,\n            \"delivery_date\": \"2023-02-04\",\n            \"is_paid\": 1,\n            \"amount_to_pay\": 0,\n            \"products_sent\": [\n                {\n                    \"product_name\": \"Product Name 1\",\n                    \"quantity\": 1\n                },\n                {\n                    \"product_name\": \"Product Name 2\",\n                    \"quantity\": 2\n                }\n            ],\n            \"products_received\": [\n                {\n                    \"product_name\": \"Product Receive Name 1\",\n                    \"quantity\": 1\n                },\n                {\n                    \"product_name\": \"Product Receive Name 2\",\n                    \"quantity\": 2\n                }\n            ],\n            \"services\": [\n                {\n                    \"mdi_group\": \"KTCH_BSC\",\n                    \"description\": \"INSTALACJA AGD KUCHNIE PODSTAWOWY\",\n                    \"is_done\": \"Niewykonana\"\n                }\n            ]\n        }\n    ]\n}"
+					"body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"market_code\": \"P123\",\n            \"delivery_number\": \"DN001\",\n            \"customer_name\": \"Joe Doe\",\n            \"delivery_address\": \"Delivery Street 1/2\",\n            \"delivery_postcode\": \"02-001\",\n            \"delivery_city\": \"Customer City\",\n            \"additional_info\": \"Please contact customer before delivery.\",\n            \"delivery_type\": {\n                \"id\": 3,\n                \"name\": \"Super Express\"\n            },\n            \"status\": \"Zlecenie anulowane\",\n            \"delivery_range\": 1,\n            \"delivery_date\": \"2023-02-04\",\n            \"is_paid\": 1,\n            \"amount_to_pay\": 0,\n            \"products_sent\": [\n                {\n                    \"product_name\": \"Product Name 1\",\n                    \"quantity\": 1\n                },\n                {\n                    \"product_name\": \"Product Name 2\",\n                    \"quantity\": 2\n                }\n            ],\n            \"services\": [\n                {\n                    \"mdi_group\": \"KTCH_BSC\",\n                    \"description\": \"INSTALACJA AGD KUCHNIE PODSTAWOWY\",\n                    \"is_done\": \"Niewykonana\"\n                }\n            ]\n        }\n    ]\n}"
 				},
 				{
 					"name": "Get Detailed Tasks List - Failure",
