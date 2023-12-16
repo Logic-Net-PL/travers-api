@@ -2,7 +2,7 @@
 ## API / Token Check
 Request
 
-`GET /healthcheck`
+`POST /healthcheck`
 
 Response
 
