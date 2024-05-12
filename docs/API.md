@@ -1,5 +1,7 @@
 # API Structure
+
 ## API / Token Check
+
 Request
 
 `POST /healthcheck`
@@ -14,6 +16,7 @@ Response
 ```
 
 ## Available markets list
+
 List of markets available for API usage
 
 Request
@@ -31,13 +34,17 @@ Response
       "street": "ALPEJSKA 6",
       "city": "Katowice",
       "postcode": "40-506",
-      "code": "P123"
+      "code": "P123",
+      "outlet_id": "172"
     }
   ]
 }
 ```
 
+Please notice `outlet_id` is not available as production parameter yet.
+
 ## Available delivery types
+
 List of delivery types available for API usage
 
 Request
@@ -58,6 +65,7 @@ Response
 ```
 
 ## Available delivery ranges
+
 List of delivery ranges available for API usage
 
 Request
@@ -78,6 +86,7 @@ Response
 ```
 
 ## Available Service Codes
+
 List of service codes available for API usage for particular one customer. Different customers
 can use different (customized) codes. MDI core codes are same for all customers.
 
@@ -109,6 +118,7 @@ Response
 ```
 
 ## Create Task
+
 Delivery task creation
 
 Request
@@ -141,10 +151,13 @@ Payload
     2
   ],
   "service_name": [
-    "KTCH_BSC"
+    "KTCH_BSC",
+    "1447629"
   ]
 }
 ```
+
+Please notice `service_name` does not support `code` or `mdi_group` on production yet.
 
 Response
 
@@ -156,6 +169,7 @@ Response
 ```
 
 ## Update task
+
 Task can be updated until delivery will be started by courier.
 
 Request
@@ -203,6 +217,7 @@ Response
 ```
 
 ## Cancel task
+
 Task can be cancelled until delivery will be started by courier.
 
 Request
@@ -258,6 +273,7 @@ Response
 ```
 
 ## Task Detailed List
+
 Simple method to get detailed information about delivery task/tasks created by API based on payload parameters
 
 Request
@@ -319,82 +335,92 @@ Response
 ```
 
 ## API Objects
+
 Definition of key API objects
 
 ### Market
-| Property  | Type   | Description                                      |
-|-----------|--------|--------------------------------------------------|
-| `$.name`  | string | Market name                                      |
-| `$.street` | string | Market address 1                                 |
-| `$.city`  | string | Market address 2                                 |
-| `$.postcode` | string | Market address 3                                 |
-| `$.code`  | string | MDI Code for future integration usage. |
+
+| Property      | Type   | Description                            |
+|---------------|--------|----------------------------------------|
+| `$.name`      | string | Market name                            |
+| `$.street`    | string | Market address 1                       |
+| `$.city`      | string | Market address 2                       |
+| `$.postcode`  | string | Market address 3                       |
+| `$.code`      | string | MDI Code for future integration usage. |
+| `$.outlet_id` | string | Market Outlet ID                       |
 
 ### Delivery Type
-| Property | Type    | Description                                       |
-|---------|---------|---------------------------------------------------|
-| `$.id`  | int(11) | Delivery type id for future integration usage     |
-| `$.name` | string  | Delivery type name                                |
+
+| Property | Type    | Description                                   |
+|----------|---------|-----------------------------------------------|
+| `$.id`   | int(11) | Delivery type id for future integration usage |
+| `$.name` | string  | Delivery type name                            |
 
 ### Delivery Range
+
 | Property  | Type    | Description                                    |
 |-----------|---------|------------------------------------------------|
 | `$.id`    | int(11) | Delivery range id for future integration usage |
 | `$.range` | string  | Delivery range                                 |
 
 ### Service Code
-| Property        | Type    | Description                                       |
-|-----------------|---------|---------------------------------------------------|
-| `$.code`        | string  | Service code used internally                      |
-| `$.description` | string  | Service description                               |
-| `$.mdi_group`   | string  | Service MDI Code                                  |
+
+| Property        | Type   | Description                  |
+|-----------------|--------|------------------------------|
+| `$.code`        | string | Service code used internally |
+| `$.description` | string | Service description          |
+| `$.mdi_group`   | string | Service MDI Code             |
 
 ### Task
-| Property                     | Type           | Required | Description                                                     |
-|------------------------------|----------------|----------|-----------------------------------------------------------------|
-| `$.market_code`              | string         | YES      | Please check _Market_                                           |
-| `$.delivery_number`          | string         | YES      | MDI Delivery Number                                             |
-| `$.customer_name`            | string         | YES      | Customer Name                                                   |
-| `$.customer_phone`           | string         | YES      | Customer Contact Number                                         |
-| `$.delivery_address`         | string         | YES      | Delivery address 1                                              |
-| `$.delivery_postcode`        | string         | YES      | Delivery address 2                                              |
-| `$.delivery_city`            | string         | YES      | Delivery address 3                                              |
-| `$.additional_info`          | string         | YES      | Additional information for delivery                             |
-| `$.delivery_type`            | int(11)        | YES      | Please check _Delivery type_                                    |
-| `$.delivery_range`           | int(11)        | YES      | Please check _Delivery range_                                   |
-| `$.delivery_date`            | datetime:Y-m-d | YES      | Delivery date (format YYYY-MM-DD)                               |
-| `$.is_paid`                  | tinyint(1)     | YES      | Mark in case if goods already paid by customer                  |
-| `$.amount_to_pay`            | float          | YES      | Feel in case if goods are not paid by customer                  |
-| `$.product_name.[*]`         | array:string   | NO       | Array of products names                                         |
-| `$.quantity.[*]`             | array:int(11)  | NO       | Array of products quantities                                    |
-| `$.service_name.[*]`         | array:string   | NO       | Array of service codes. Please check _Service code_             |
+
+| Property              | Type           | Required | Description                                         |
+|-----------------------|----------------|----------|-----------------------------------------------------|
+| `$.market_code`       | string         | YES      | Please check _Market_                               |
+| `$.delivery_number`   | string         | YES      | MDI Delivery Number                                 |
+| `$.customer_name`     | string         | YES      | Customer Name                                       |
+| `$.customer_phone`    | string         | YES      | Customer Contact Number                             |
+| `$.delivery_address`  | string         | YES      | Delivery address 1                                  |
+| `$.delivery_postcode` | string         | YES      | Delivery address 2                                  |
+| `$.delivery_city`     | string         | YES      | Delivery address 3                                  |
+| `$.additional_info`   | string         | YES      | Additional information for delivery                 |
+| `$.delivery_type`     | int(11)        | YES      | Please check _Delivery type_                        |
+| `$.delivery_range`    | int(11)        | YES      | Please check _Delivery range_                       |
+| `$.delivery_date`     | datetime:Y-m-d | YES      | Delivery date (format YYYY-MM-DD)                   |
+| `$.is_paid`           | tinyint(1)     | YES      | Mark in case if goods already paid by customer      |
+| `$.amount_to_pay`     | float          | YES      | Feel in case if goods are not paid by customer      |
+| `$.product_name.[*]`  | array:string   | NO       | Array of products names                             |
+| `$.quantity.[*]`      | array:int(11)  | NO       | Array of products quantities                        |
+| `$.service_name.[*]`  | array:string   | NO       | Array of service codes. Please check _Service code_ |
 
 ### Task Basic
+
 | Property            | Type   | Description             |
 |---------------------|--------|-------------------------|
 | `$.delivery_number` | string | Delivery number         |
 | `$.status`          | string | Current delivery status |
 
 ### Task Detailed
-| Property                  | Type           | Description                                                     |
-|---------------------------|----------------|-----------------------------------------------------------------|
-| `$.market_code`           | string         | Please check _Market_                                           |
-| `$.delivery_number`       | string         | MDI Delivery Number                                             |
-| `$.customer_name`         | string         | Customer Name                                                   |
-| `$.customer_phone`        | string         | Customer Contact Number                                         |
-| `$.delivery_address`      | string         | Delivery address 1                                              |
-| `$.delivery_postcode`     | string         | Delivery address 2                                              |
-| `$.delivery_city`         | string         | Delivery address 3                                              |
-| `$.additional_info`       | string         | Additional information for delivery                             |
-| `$.delivery_type`         | object         | Please check _Delivery type_                                    |
-| `$.status`                | string         | Current delivery status                                         |
-| `$.delivery_range`        | int(11)        | Please check _Delivery range_                                   |
-| `$.delivery_date`         | datetime:Y-m-d | Delivery date (format YYYY-MM-DD)                               |
-| `$.is_paid`               | tinyint(1)     | Mark in case if goods already paid by customer                  |
-| `$.amount_to_pay`         | float          | Feel in case if goods are not paid by customer                  |
-| `$.services.[*]`          | array:object   | Please check _Service_                                          |
+
+| Property              | Type           | Description                                    |
+|-----------------------|----------------|------------------------------------------------|
+| `$.market_code`       | string         | Please check _Market_                          |
+| `$.delivery_number`   | string         | MDI Delivery Number                            |
+| `$.customer_name`     | string         | Customer Name                                  |
+| `$.customer_phone`    | string         | Customer Contact Number                        |
+| `$.delivery_address`  | string         | Delivery address 1                             |
+| `$.delivery_postcode` | string         | Delivery address 2                             |
+| `$.delivery_city`     | string         | Delivery address 3                             |
+| `$.additional_info`   | string         | Additional information for delivery            |
+| `$.delivery_type`     | object         | Please check _Delivery type_                   |
+| `$.status`            | string         | Current delivery status                        |
+| `$.delivery_range`    | int(11)        | Please check _Delivery range_                  |
+| `$.delivery_date`     | datetime:Y-m-d | Delivery date (format YYYY-MM-DD)              |
+| `$.is_paid`           | tinyint(1)     | Mark in case if goods already paid by customer |
+| `$.amount_to_pay`     | float          | Feel in case if goods are not paid by customer |
+| `$.services.[*]`      | array:object   | Please check _Service_                         |
 
 ### Product sent
+
 | Property         | Type    | Description      |
 |------------------|---------|------------------|
 | `$.product_name` | string  | Product name     |
