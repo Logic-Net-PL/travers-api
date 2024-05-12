@@ -297,6 +297,7 @@ Response
   "data": [
     {
       "market_code": "O2243",
+      "market_outlet_id": "127",
       "delivery_number": "DN001",
       "customer_name": "Joe Doe",
       "delivery_address": "Delivery Street 1/2",
@@ -324,6 +325,7 @@ Response
       ],
       "services": [
         {
+          "code": "1447629",
           "mdi_group": "KTCH_BSC",
           "description": "INSTALACJA AGD KUCHNIE PODSTAWOWY",
           "is_done": "Niewykonana"
@@ -404,6 +406,7 @@ Definition of key API objects
 | Property              | Type           | Description                                    |
 |-----------------------|----------------|------------------------------------------------|
 | `$.market_code`       | string         | Please check _Market_                          |
+| `$.market_outlet_id`  | string         | Please check _Market_                          |
 | `$.delivery_number`   | string         | MDI Delivery Number                            |
 | `$.customer_name`     | string         | Customer Name                                  |
 | `$.customer_phone`    | string         | Customer Contact Number                        |
