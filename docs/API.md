@@ -164,8 +164,7 @@ Response
 ```json
 {
   "success": true,
-  "internal_task_number": "TRA/1/19/2023",
-  "tracking_id": 1192023
+  "internal_task_number": "TRA/1/19/2023"
 }
 ```
 
