@@ -336,6 +336,35 @@ Response
 }
 ```
 
+## Task Status History
+
+Endpoint return task status history with dedicated timestamps for change
+
+
+Request
+
+`GET /task/{deliveryNumber}/status/history`
+
+Response
+
+```json
+{
+    "success": true,
+    "data": [
+        {
+            "status_id": 7,
+            "status": "Ready for pickup",
+            "updated_at": "2024-10-20T12:46:44+02:00"
+        },
+        {
+            "status_id": 11,
+            "status": "Cancelled",
+            "updated_at": "2024-10-20T12:50:07+02:00"
+        }
+    ]
+}
+```
+
 ## API Objects
 
 Definition of key API objects
@@ -428,3 +457,11 @@ Definition of key API objects
 |------------------|---------|------------------|
 | `$.product_name` | string  | Product name     |
 | `$.quantity`     | int(11) | Product quantity |
+
+### Task Status History
+
+| Property         | Type      | Description                 |
+|------------------|-----------|-----------------------------|
+| `$.status_id`    | int(11)   | Status ID                   |
+| `$.status`       | string    | Status name in english      |
+| `$.updated_at`   | timestamp | ISO 8601 standard timestamp |
